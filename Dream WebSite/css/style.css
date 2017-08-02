@@ -1,0 +1,214 @@
+@font-face{
+	font-family:bnm;
+	src:url(../fonts/bpg_nino_mtavruli_normal.ttf);
+}
+*{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	text-decoration:none;
+	box-sizing:border-box;
+}
+button{
+	outline:none;
+	border:none;
+}
+#homepage{
+	background:black;
+}
+.clear{
+	clear:both;
+}
+header{
+	width:100%;
+	padding:40px 100px 40px 100px;
+}
+.wrapper{
+	margin:0 auto;
+	max-width:1052px;
+	width:100%;
+}
+.dis-flex-between{
+	display:flex;
+	justify-content:space-between;
+}
+.grad-border{
+	  -moz-border-image: -moz-linear-gradient(left, #2D98D4 0%, #E81F64 100%);
+	  -webkit-border-image: -webkit-linear-gradient(left, #2D98D4 0%, #E81F64 100%);
+	  border-image: linear-gradient(to right,#2D98D4 0%, #E81F64 100%);
+	  border-image-slice: 1;
+}
+.logo{
+	width:100px;
+}
+nav{
+	width:100%;
+	max-width:715px;
+	float:right;
+	display:flex;
+	justify-content:space-between;
+}
+.my-dreams{
+	width:100%;
+	height:calc(100vh - 140px);
+}
+.my-dreams-t h1{
+	color:#7A7977;
+	font-size:32px;
+	font-weight:normal;
+	text-align:center;
+}
+.my-dreams-b{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+	margin:auto;
+	width:100%;
+	max-width:865px;
+}
+.mdb{
+	overflow:hidden;
+	text-align:center;
+	padding:70px 0 20px 0;
+	background:url(../images/dream-cards/bck.png)white;
+	background-repeat:no-repeat;
+	background-position:160%;
+	margin-top:40px;
+	width:260px;
+	height:214px;
+	transition:0.5s;
+}
+.mdb h1{
+	font-size:32px;
+	color:#7A7977;
+	font-weight:normal;
+	margin-bottom:10px;
+}
+.mdb p{
+	font-size:14px;
+	color:#BCBCBC;
+}
+.mdb span{
+	margin-right:80px;
+	font-size:14px;
+	color:white;
+	padding:0 0 14px 0;
+	border-bottom:1px solid white;
+}
+.registration{
+	width:360px;
+	margin:50px auto;
+}
+.close-btn{
+	position:relative;
+	border:2px solid transparent;
+	-moz-border-image: -moz-linear-gradient(left, #2D98D4 0%, #E81F64 100%);
+	-webkit-border-image: -webkit-linear-gradient(left, #2D98D4 0%, #E81F64 100%);
+	border-image: linear-gradient(to right,#2D98D4 0%, #E81F64 100%);
+	border-image-slice: 1;
+	background:transparent;
+	color:white;
+	width:100px;
+	text-align:center;
+	line-height:20px;
+	height:20px;
+	margin-left:calc(50% - 50px);
+	font-size:14px;
+	font-family:bnm;
+	font-weight:bold;
+}
+.close-btn-snt{
+	position:absolute;
+	top:-6.5px;
+	left:4.5px;
+	width:88px;
+	height:30px;
+	border:2px solid transparent;
+	-moz-border-image: -moz-linear-gradient(left, #2D98D4 0%, #E81F64 100%);
+	-webkit-border-image: -webkit-linear-gradient(left, #2D98D4 0%, #E81F64 100%);
+	border-image: linear-gradient(to right,#2D98D4 0%, #E81F64 100%);
+	border-image-slice: 1;
+}
+.registration form>h1{
+	font-size:32px;
+	font-family:bnm;
+	color:white;
+	text-align:center;
+	font-weight:normal;
+	margin-top:50px;
+}
+.registration form{
+	width:360px;
+	margin:auto;
+}
+.registration form>input{
+	border-top:0px solid transparent;
+	border-left:0px solid transparent;
+	border-right:0px solid transparent;
+	border-bottom:2px solid transparent;
+	-moz-border-image: -moz-linear-gradient(left, #2D98D4 0%, #E81F64 100%);
+	-webkit-border-image: -webkit-linear-gradient(left, #2D98D4 0%, #E81F64 100%);
+	border-image: linear-gradient(to right,#2D98D4 0%, #E81F64 100%);
+	border-image-slice: 2;
+	padding:10px 50px;
+	font-size:22px;
+	width:100%;
+	background:transparent;
+	font-weight:normal;
+	font-family:bnm;
+	color:#BCBCBC;
+	margin-bottom:25px;
+	outline:none;
+}
+.log-in{
+	background:linear-gradient(90deg,#2D98D4 , #E81F64);
+	width:120px;
+	height:24px;
+	border-radius:5px;
+	margin-left:calc(50% - 60px);
+	font-size:20px;
+	font-family:bnm;
+	font-weight:normal;
+	color:#FFFFFF;
+	line-height:27px;
+	margin-top:10px;
+	margin-bottom:15px;
+	text-align:center;
+	cursor:pointer;
+}
+.forgot-pass{
+	display:block;
+	margin:auto;
+	color:white;
+	width:139px;
+	font-family:bnm;
+	font-size:20px;
+	font-weight:bold;
+}
+.fb-btn{
+	width:240px;
+	height:38px;
+	line-height:38px;
+	text-align:center;
+	color:white;
+	font-size:15px;
+	font-family:bnm;
+	font-weight:normal;
+	background:url(../images/icon/fb.png)#354350 no-repeat;
+	background-position:14% 50%;
+	border-radius:5px;
+	padding-left:50px;
+	margin:24px 0 20px calc(50% - 120px) ;
+}
+.reg-now{
+	font-size:25px;
+	font-family:bnm;
+	font-weight: normal;
+	color:white;
+	width:128px;
+	margin-left:calc(50% - 64px);
+}
+#map{
+	width:100%;
+	height:calc(100vh - 138.4px);
+}

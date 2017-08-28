@@ -65,6 +65,7 @@ nav{
 	margin:auto;
 	width:100%;
 	max-width:865px;
+	margin-top:-20px;
 }
 .mdb{
 	overflow:hidden;
@@ -87,6 +88,8 @@ nav{
 .mdb p{
 	font-size:14px;
 	color:#BCBCBC;
+	text-align:left;
+	padding-left:53px;
 }
 .mdb span{
 	margin-right:80px;

@@ -4,7 +4,7 @@ $(document).ready(function(){
 			'background':'url(./images/dream-cards/bck-c.png)#354350',
 			'background-repeat':'no-repeat',
 			'background-position':"160%",
-			'padding':'150px 0 20px 0'
+			'padding':'130px 0 20px 0'
 		});
 		$(this).empty();
 		$(this).append('<span class="example-one" data-text="MORE DETAILS +">MORE DETAILS +</span>');

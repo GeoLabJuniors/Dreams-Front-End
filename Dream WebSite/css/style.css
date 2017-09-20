@@ -39,6 +39,7 @@ header{
 	  border-image-slice: 1;
 }
 .logo{
+	margin-right:30px;
 	width:100px;
 }
 nav{
@@ -59,6 +60,7 @@ nav{
 	text-align:center;
 }
 .my-dreams-b{
+	padding-bottom: 30px;
 	display:flex;
 	flex-wrap:wrap;
 	justify-content:space-between;
@@ -68,6 +70,7 @@ nav{
 	margin-top:-20px;
 }
 .mdb{
+	cursor:pointer;
 	overflow:hidden;
 	text-align:center;
 	padding:70px 0 20px 0;
@@ -204,6 +207,8 @@ nav{
 	margin:24px 0 20px calc(50% - 120px) ;
 }
 .reg-now{
+	display:flex;
+	justify-content:center;
 	font-size:25px;
 	font-family:bnm;
 	font-weight: normal;

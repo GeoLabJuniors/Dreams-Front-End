@@ -1,4 +1,13 @@
 $(document).ready(function(){
+
+
+	$('.har').keypress(function(){
+		console.log('sds')
+		$('#com-btn').css('display','block')
+	})
+		
+	
+
 	$('.mdb').mouseenter(function(){
 		$(this).css({
 			'background':'url(./images/dream-cards/bck-c.png)#354350',

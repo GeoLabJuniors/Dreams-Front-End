@@ -2,6 +2,10 @@
 	font-family:bnm;
 	src:url(../fonts/bpg_nino_mtavruli_normal.ttf);
 }
+@font-face{
+	font-family:myFont;
+	src:url(../fonts/gadugi.ttf);
+}
 *{
 	margin:0;
 	padding:0;
@@ -322,3 +326,22 @@ nav{
 	margin-left:20px;
 	cursor: pointer;
 }
+#category_icon img{width:80px;
+height:80px;
+	
+}
+#category_icon{
+	margin-top:30px;
+	
+}
+#detail p{
+	
+	margin-top:15px;
+	font-family:myFont;
+	 font-size:19.17px;
+	  color:white;}
+	#detail h1{
+	color:white;
+	 font-family:myFont; 
+	 font-size:34.21px	
+	}

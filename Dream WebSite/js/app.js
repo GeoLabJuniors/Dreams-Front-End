@@ -16,7 +16,7 @@ $(document).ready(function(){
 			'padding':'130px 0 20px 0'
 		});
 		$(this).empty();
-		$(this).append('<span class="example-one" data-text="MORE DETAILS +">MORE DETAILS +</span>');
+		$(this).append('<a href="AboutDreams.html"class="example-one" data-text="MORE DETAILS +">MORE DETAILS +</a>');
 	})
 	$('.mdb').mouseleave(function(){
 		$(this).css({

@@ -348,6 +348,12 @@ height:80px;
 	color:#7d8087;
 	font-family:myFont;
 }
+#detail span{
+	color:#d1d1d1; 
+	font-family: myFont;
+	display: block;
+	margin-top: 10px;
+}
 #detail h1{
 	color:#d1d1d1;
 	font-family:myFont; 
@@ -406,3 +412,61 @@ width: 100%;
 	
 }
 */
+#Dream-title{
+	margin-top:130px;
+	
+}
+.form{
+	background-color:black;
+	font-weight:400;
+	border-left:none;
+	border-top:none;
+	border-right:none;
+ border-image: linear-gradient(to right,#2D98D4 0%, #E81F64 100%);
+	border-image-slice: 1;
+	margin-top:15px;
+	width:345px;
+	border-width:thin;
+	height:26px;
+	}
+	
+	input::placeholder{
+		color:#D1D1D1;
+		font-family:MyFont;
+	font-size:24px;
+	}
+	textarea{
+		width:345px;
+		background-color:black;
+		margin-top:20px;
+		height:40px;
+		border-top:none;
+		border-right:none;
+		border-bottom:none;
+		background-color:black;
+		border-image: linear-gradient(to right,#2D98D4 0%, #E81F64 100%);
+	border-image-slice: 1;
+		border-width:thin;
+	}
+	textarea::placeholder{
+		color:#D1D1D1;
+		font-family:MyFont;
+	font-size:24px;	
+	}
+	
+	#Dream-details{
+		margin-top:235px;
+			display:flex;
+			height:60px;
+		
+		
+	}
+	
+	.dream-inputs{
+		 width:160px;
+		 margin-left:117px;
+		
+	}
+.tags_footer{
+	margin-bottom: 100px;
+}

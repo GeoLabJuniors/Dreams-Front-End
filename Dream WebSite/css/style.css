@@ -26,7 +26,7 @@ button{
 }
 #homepage{
 	background:black;
-	margin-bottom:30px;
+	
 }
 .clear{
 	clear:both;
@@ -43,7 +43,9 @@ header{
 .dis-flex-between{
 	display:flex;
 	justify-content:space-between;
+
 }
+
 .grad-border{
 	  -moz-border-image: -moz-linear-gradient(left, #2D98D4 0%, #E81F64 100%);
 	  -webkit-border-image: -webkit-linear-gradient(left, #2D98D4 0%, #E81F64 100%);
@@ -389,4 +391,18 @@ height:80px;
 	border-image: linear-gradient(to right,#2D98D4 0%, #E81F64 100%);
 	border-image-slice: 1;
 	margin-left: 25px;
+	cursor: pointer;
 }
+#dream-body{
+margin-top:10px;	
+	
+}
+
+/*
+.wrapper-dream-body{
+margin: 0 auto;
+max-width: 865px;
+width: 100%;	
+	
+}
+*/

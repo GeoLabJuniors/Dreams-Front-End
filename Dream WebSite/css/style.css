@@ -16,6 +16,9 @@
 	list-style-type:none;
 	text-decoration:none;
 	box-sizing:border-box;
+	
+
+	
 }
 button{
 	outline:none;
@@ -23,6 +26,7 @@ button{
 }
 #homepage{
 	background:black;
+	margin-bottom:30px;
 }
 .clear{
 	clear:both;
@@ -345,7 +349,8 @@ height:80px;
 #detail h1{
 	color:#d1d1d1;
 	font-family:myFont; 
-	font-size:34.21px	
+	font-size:34.21px;
+	font-weight: 400;	
 }
 #date{
 	text-align: right;
@@ -354,7 +359,7 @@ height:80px;
 	display: flex;
 	flex-wrap: wrap;
 	max-width: 375px;
-	padding-top: 30px;
+
 }
 .tag{
 	margin-right: 10px;

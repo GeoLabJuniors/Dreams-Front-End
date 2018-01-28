@@ -367,7 +367,6 @@ height:80px;
 	display: flex;
 	flex-wrap: wrap;
 	max-width: 375px;
-	align-self: flex-start;
 }
 .tag{
 	margin-right: 10px;
@@ -401,7 +400,6 @@ height:80px;
 }
 #dream-body{
 margin-top:10px;	
-	
 }
 .tags_footer{
 	margin-bottom: 100px;
@@ -479,4 +477,22 @@ textarea::placeholder{
 }
 .mr-t{
 	margin-top: 100px;
+}
+.text-right{
+	text-align: right;
+}
+.categories{
+	display: flex;
+	flex-wrap:wrap;
+	max-width: 390px;
+	margin-right: 110px;
+}
+.category img{
+	padding-right: 5px;
+}
+.category a{
+	margin-right:10px;
+	color: #fff;
+	font-size: 16.5px;
+	font-family: futura;
 }

@@ -30,19 +30,19 @@
 <textarea placeholder="  text"></textarea>
 </div><!--end of dream title-->
 <div id="Dream-details">
-<input type="text" placeholder="Hashtag" name="Hashtag" class="form" style=" width:160px;"/>
+<input type="text" placeholder="Hashtag" name="Hashtag" class="form" style=" width:160px;" onclick="addFunction()" />
 <input type="text" placeholder="City" name="City" class="form dream-inputs"/>
 <input type="text" placeholder="Date" name="Date" class="form dream-inputs unstyledDateInput" onfocus="(this.type='date')" onblur="(this.type='text')" id="date"/>
 <select name="Category" class="form dream-inputs">
   <option default>Category</option>
+  <option value="option1">option1</option>
   <option value="option2">option2</option>
   <option value="option3">option3</option>
-  <option value="option4">option4</option>
 </select>
 </div>
 <!--end of dream details-->
 <div class="dis-flex-between tags_footer mr-t">
-	<div class="hashtags">
+	<div class="hashtags" id="myList">
 	<div class="tag">
 		<a href="#">#tagthatgoeshere</a>
 	</div>
@@ -59,11 +59,31 @@
 		<a href="#">#numberthree</a>
 	</div>
 	</div>
-	<div class="button_group mr-t">
+	<script>
+	
+	</script>
+	<div class="categories">
+		<div class="category">
+			<a href="#"><img src="images/dream-cards/bck-s.png">Comedy</a>
+		</div>
+		<div class="category">
+			<a href="#"><img src="images/dream-cards/bck-s.png">Drama</a>
+		</div>
+		<div class="category">
+			<a href="#"><img src="images/dream-cards/bck-s.png">Realistic</a>
+		</div>
+		<div class="category">
+			<a href="#"><img src="images/dream-cards/bck-s.png">Mystic</a>
+		</div>
+		<div class="category">
+			<a href="#"><img src="images/dream-cards/bck-s.png">Horror</a>
+		</div>
+	</div>
+</div>
+	<div class="button_group mr-t text-right">
 		<button class="grad-border" id="bt_cancel">Cancel</button>
 		<button class="grad-border">Save</button>
 	</div>
-</div>
 </div><!--end of wrapper-->
 
 

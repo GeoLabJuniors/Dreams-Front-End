@@ -348,6 +348,12 @@ height:80px;
 	color:#7d8087;
 	font-family:myFont;
 }
+#detail span{
+	color:#d1d1d1; 
+	font-family: myFont;
+	display: block;
+	margin-top: 10px;
+}
 #detail h1{
 	color:#d1d1d1;
 	font-family:myFont; 
@@ -361,7 +367,6 @@ height:80px;
 	display: flex;
 	flex-wrap: wrap;
 	max-width: 375px;
-
 }
 .tag{
 	margin-right: 10px;
@@ -396,6 +401,9 @@ height:80px;
 #dream-body{
 margin-top:10px;	
 	
+}
+.tags_footer{
+	margin-bottom: 100px;
 }
 
 /*

@@ -11,10 +11,10 @@
 <header>
 	<div class="wrapper dis-flex-between">
 		<div class="logo">
-			<a href="index.html"><img src="images/logo/logo-c.png"></a>
+			<a href="index.html"><img src="images/logo/logo.png"></a>
 		</div>
 		<nav>
-			<a href="dreams.html"><img src="./images/nav/nav1.png"></a>
+			<a href="dreams.html"><img src="./images/nav/nav1-c.png"></a>
 			<a href="#"><img src="./images/nav/nav2.png"></a>
 			<a href="map.html"><img src="./images/nav/nav3.png"></a>
 			<a href="signIn.html"><img src="./images/nav/nav4.png"></a>
@@ -30,15 +30,18 @@
 <textarea placeholder="  text"></textarea>
 </div><!--end of dream title-->
 <div id="Dream-details">
-<input type="text"placeholder="Hashtag" name="Hashtag" class="form" style=" width:160px;"/>
-<input type="text"placeholder="City" name="City" class="form dream-inputs"/>
-<input type="text"placeholder="Date" name="Date" class="form dream-inputs"/>
-<input type="text"placeholder="Category" name="Category" class="form dream-inputs"/>
+<input type="text" placeholder="Hashtag" name="Hashtag" class="form" style=" width:160px;"/>
+<input type="text" placeholder="City" name="City" class="form dream-inputs"/>
+<input type="text" placeholder="Date" name="Date" class="form dream-inputs unstyledDateInput" onfocus="(this.type='date')" onblur="(this.type='text')" id="date"/>
+<select name="Category" class="form dream-inputs">
+  <option default>Category</option>
+  <option value="option2">option2</option>
+  <option value="option3">option3</option>
+  <option value="option4">option4</option>
+</select>
 </div>
 <!--end of dream details-->
-<p id="date">24/05/17</p>
-
-<div class="dis-flex-between tags_footer">
+<div class="dis-flex-between tags_footer mr-t">
 	<div class="hashtags">
 	<div class="tag">
 		<a href="#">#tagthatgoeshere</a>
@@ -56,10 +59,9 @@
 		<a href="#">#numberthree</a>
 	</div>
 	</div>
-	<div class="button_group">
-		<button class="grad-border">Map</button>
-		<a href="AddDream.html"><button class="grad-border">Edit</button></a>
-		<button class="grad-border">Delete</button>
+	<div class="button_group mr-t">
+		<button class="grad-border" id="bt_cancel">Cancel</button>
+		<button class="grad-border">Save</button>
 	</div>
 </div>
 </div><!--end of wrapper-->

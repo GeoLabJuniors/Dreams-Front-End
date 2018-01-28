@@ -367,6 +367,7 @@ height:80px;
 	display: flex;
 	flex-wrap: wrap;
 	max-width: 375px;
+	align-self: flex-start;
 }
 .tag{
 	margin-right: 10px;
@@ -424,51 +425,58 @@ width: 100%;
 	border-left:none;
 	border-top:none;
 	border-right:none;
- border-image: linear-gradient(to right,#2D98D4 0%, #E81F64 100%);
+ 	border-image: linear-gradient(to right,#2D98D4 0%, #E81F64 100%);
 	border-image-slice: 1;
 	margin-top:15px;
 	width:345px;
 	border-width:thin;
-	height:26px;
-	}
-	
-	input::placeholder{
-		color:#D1D1D1;
-		font-family:MyFont;
-	font-size:24px;
-	}
-	textarea{
-		width:345px;
-		background-color:black;
-		margin-top:20px;
-		height:40px;
-		border-top:none;
-		border-right:none;
-		border-bottom:none;
-		background-color:black;
-		border-image: linear-gradient(to right,#2D98D4 0%, #E81F64 100%);
+	color: #fff;
+	outline: none;
+	text-indent: 3px;
+	font-size: 24px;
+}
+input::placeholder{
+	color:#D1D1D1;
+	font-family:MyFont;
+}
+textarea{
+	width:345px;
+	background-color:black;
+	margin-top:20px;
+	height:40px;
+	border-top:none;
+	border-right:none;
+	border-bottom:none;
+	background-color:black;
+	border-image: linear-gradient(to right,#2D98D4 0%, #E81F64 100%);
 	border-image-slice: 1;
-		border-width:thin;
-	}
-	textarea::placeholder{
-		color:#D1D1D1;
-		font-family:MyFont;
+	border-width:thin;
+}
+textarea::placeholder{
+	color:#D1D1D1;
+	font-family:MyFont;
 	font-size:24px;	
-	}
-	
-	#Dream-details{
-		margin-top:235px;
-			display:flex;
-			height:60px;
-		
-		
-	}
-	
-	.dream-inputs{
-		 width:160px;
-		 margin-left:117px;
-		
-	}
-.tags_footer{
-	margin-bottom: 100px;
+}
+.unstyledDateInput::-webkit-inner-spin-button,
+.unstyledDateInput::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+.unstyledDateInput::placeholder{
+	text-align: left;
+}
+#Dream-details{
+	margin-top:235px;
+	display:flex;
+	height:60px;
+}
+.dream-inputs{
+	width:160px;
+	margin-left:117px;	
+}
+#bt_cancel{
+	margin-right: 40px;
+}
+.mr-t{
+	margin-top: 100px;
 }

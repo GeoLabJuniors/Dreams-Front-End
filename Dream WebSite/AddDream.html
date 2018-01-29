@@ -6,6 +6,8 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="js/app.js"></script>
+
+
 </head>
 <body id="homepage">
 <header>
@@ -30,7 +32,7 @@
 <textarea placeholder="  text"></textarea>
 </div><!--end of dream title-->
 <div id="Dream-details">
-<input type="text" placeholder="Hashtag" name="Hashtag" class="form" style=" width:160px;" onclick="addFunction()" />
+<input type="text" placeholder="Hashtag" name="Hashtag" class="form" onkeyup="myFunction(this,event)" style=" width:160px;"/>
 <input type="text" placeholder="City" name="City" class="form dream-inputs"/>
 <input type="text" placeholder="Date" name="Date" class="form dream-inputs unstyledDateInput" onfocus="(this.type='date')" onblur="(this.type='text')" id="date"/>
 <select name="Category" class="form dream-inputs">
@@ -85,8 +87,20 @@
 		<button class="grad-border">Save</button>
 	</div>
 </div><!--end of wrapper-->
-
-
 </main>
+<script>
+	function myFunction(t,e){
+		if(e.keyCode==13)
+		var x = document.createElement('div');
+		x.setAttribute('class','tag');
+		var y = document.createElement('a');
+		y.setAttribute('href',"#");
+		y.innerHTML = "#"+t.value;
+		x.appendChild(y);
+		document.getElementById("myList").appendChild(x);
+		t.value = t.defaultValue;
+	}
+
+</script>
 </body>
 </html>

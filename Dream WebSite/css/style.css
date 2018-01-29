@@ -401,15 +401,12 @@ height:80px;
 #dream-body{
 margin-top:10px;	
 }
-
-/*
 .wrapper-dream-body{
 margin: 0 auto;
 max-width: 865px;
 width: 100%;	
 	
 }
-*/
 #Dream-title{
 	margin-top:130px;
 	
@@ -463,11 +460,11 @@ textarea::placeholder{
 #Dream-details{
 	margin-top:235px;
 	display:flex;
+	justify-content: space-between;
 	height:60px;
 }
 .dream-inputs{
-	width:160px;
-	margin-left:117px;	
+	width:160px;	
 }
 #bt_cancel{
 	margin-right: 40px;
@@ -481,8 +478,7 @@ textarea::placeholder{
 .categories{
 	display: flex;
 	flex-wrap:wrap;
-	max-width: 390px;
-	margin-right: 110px;
+	max-width: 290px;
 }
 .category img{
 	padding-right: 5px;

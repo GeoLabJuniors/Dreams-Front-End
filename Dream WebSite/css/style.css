@@ -363,6 +363,7 @@ height:80px;
 	display: flex;
 	flex-wrap: wrap;
 	max-width: 375px;
+	align-items: flex-start;
 }
 .tag{
 	margin-right: 10px;

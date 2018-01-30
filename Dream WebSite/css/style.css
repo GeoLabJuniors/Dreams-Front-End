@@ -16,17 +16,13 @@
 	list-style-type:none;
 	text-decoration:none;
 	box-sizing:border-box;
-	
-
-	
 }
 button{
 	outline:none;
 	border:none;
 }
 #homepage{
-	background:black;
-	
+	background:black;	
 }
 .clear{
 	clear:both;

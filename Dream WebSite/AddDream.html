@@ -35,7 +35,7 @@
 <input type="text" placeholder="Hashtag" name="Hashtag" class="form" onkeyup="myFunction(this,event)" style=" width:160px;"/>
 <input type="text" placeholder="City" name="City" class="form dream-inputs"/>
 <input type="text" placeholder="Date" name="Date" class="form dream-inputs unstyledDateInput" onfocus="(this.type='date')" onblur="(this.type='text')" id="date"/>
-<select name="Category" class="form dream-inputs" id="category_select" onchange="myFunction1(this,event)">
+<select name="Category" class="form dream-inputs" id="category_select">
   <option default>Category</option>
   <option value="option1">option1</option>
   <option value="option2">option2</option>
@@ -103,17 +103,20 @@
 		document.getElementById("myList").appendChild(x);
 		t.value = t.defaultValue;
 	}
-	function myFunction1 (div,a,img){ 
-var div = document.createElement('div');
-div.setAttribute('class','category');
-var a = document.createElement('a');
-a.innerText =this.value;
-div.appendChild(a);
-img = document.createElement('img');
-img.setAttribute('src','images/dream-cards/bck-s.png');
-a.appendChild(img);
-document.getElementById('category_tags').appendChild(div);
-};
+document.getElementById("category_select").addEventListener("change", function(){
+	var value = this.value;
+    var div = document.createElement("div");
+    div.setAttribute("class", "category");
+    var a = document.createElement("a")
+    a.setAttribute("href", "#")
+    var img = document.createElement("img");
+    img.setAttribute("src", "images/dream-cards/bck-s.png");
+    a.appendChild(img);
+    var t = document.createTextNode(value);
+    a.appendChild(t);
+    div.appendChild(a);
+    document.getElementById("category_tags").appendChild(div);
+});
 </script>
 </body>
 </html>

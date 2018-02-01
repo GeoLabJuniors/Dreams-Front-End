@@ -80,7 +80,7 @@ nav{
 	margin-top:-20px;
 }
 .mdb{
-	cursor:pointer;
+cursor:pointer;
 	overflow:hidden;
 	text-align:center;
 	padding:70px 0 20px 0;
@@ -104,12 +104,24 @@ nav{
 	text-align:left;
 	padding-left:53px;
 }
-.mdb a{
+.mdb span{
 	margin-right:80px;
 	font-size:14px;
 	color:white;
 	padding:0 0 3px 0;
 	border-bottom:1px solid white;
+}
+.dreamDivHover {
+    background: url(../images/dream-cards/bck-c.png)#354350 !important;
+    background-repeat: no-repeat !important;
+    background-position: 160% !important;
+    padding: 130px 0 20px 0;
+}
+.font-bnm {
+font-family: bnm;
+}
+button:hover {
+cursor: pointer;
 }
 .registration{
 	width:360px;

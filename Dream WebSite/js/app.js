@@ -7,28 +7,23 @@ $(document).ready(function(){
 	})
 		
 	
+  $(".hiddenMDB").hide();
+	
+    $('.mdb').mouseenter(function () {
+        $(this).addClass("dreamDivHover");
+        $(this).find(".activeMDB").hide();
+        $(this).find(".hiddenMDB").show();
+    })
 
-	$('.mdb').mouseenter(function(){
-		$(this).css({
-			'background':'url(./images/dream-cards/bck-c.png)#354350',
-			'background-repeat':'no-repeat',
-			'background-position':"160%",
-			'padding':'130px 0 20px 0'
-		});
-		$(this).empty();
-		$(this).append('<a href="AboutDreams.html"class="example-one" data-text="MORE DETAILS +">MORE DETAILS +</a>');
-	})
-	$('.mdb').mouseleave(function(){
-		$(this).css({
-			'background':'url(./images/dream-cards/bck.png)white',
-			'background-repeat':'no-repeat',
-			'background-position':"160%",
-			'padding':'70px 0 20px 0'
-		});
-		$(this).empty();
-		$(this).append('<h1>MAGIC</h1>'+
-			'<p>Creative storm and ocean of<br>success</p>');
-	})
+
+
+
+    $('.mdb').mouseleave(function () {
+        $(this).removeClass("dreamDivHover");
+        $(this).find(".hiddenMDB").hide();
+        $(this).find(".activeMDB").show();
+    })
+
 
 	var date = new Date();
 	hour = date.getHours();

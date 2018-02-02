@@ -491,7 +491,7 @@ width: 100%;
 .categories{
 	display: flex;
 	flex-wrap:wrap;
-	max-width: 290px;
+	max-width: 310px;
 }
 .category{
 	margin-right: 10px;

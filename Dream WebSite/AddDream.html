@@ -52,7 +52,7 @@
 	</div>
 </div><!--end of wrapper-->
 </main>
-<script>
+<script>//add hashtags
 	function myFunction(t,e){
 		if(e.keyCode==13|| e.keyCode==32){
 			if(t.value!=0){
@@ -64,13 +64,14 @@
 		y.setAttribute('href',"#");
 		y.innerHTML = "#"+t.value;
 		x.appendChild(y);
-			x.appendChild(z);
+		x.appendChild(z);
 		document.getElementById("myList").appendChild(x);
 		t.value = t.defaultValue;
-			
-	}}
-	
-};
+		$(z).click(function(){
+    	$(x).remove();
+});
+	}}	
+};//add categories
 document.getElementById("category_select").addEventListener("change", function(){
 	var value = this.value;
     var div = document.createElement("div");
@@ -79,36 +80,19 @@ document.getElementById("category_select").addEventListener("change", function()
     a.setAttribute("href", "#");
     var img = document.createElement("img");
     img.setAttribute("src", "images/dream-cards/bck-s.png");
-	var z = document.createElement('div');
-		z.setAttribute('class','close');
-    a.appendChild(img);
-	
+    a.appendChild(img);	
     var t = document.createTextNode(value);
-    a.appendChild(t);
-	
-		
+    a.appendChild(t);		
     div.appendChild(a);
-	 div.appendChild(z);
     document.getElementById("category_tags").appendChild(div);
 });
 </script>
 <script>
-
 $('.categories.category .hashtags.tag').hover(function(){
     $(this).find('.close').animate({opacity:1},100)
         },function(){
             $(this).find('.close').animate({opacity:0},100)
-        }
-                  )
-
-</script>
-<script>
-//function del(tag){ 
- //   var element = document.getElementByClassName("tag");
-  //  element.parentNode.removeChild(myList);   
-//};
-
-
+        });
 </script>
 </body>
 </html>

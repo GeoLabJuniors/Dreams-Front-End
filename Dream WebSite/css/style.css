@@ -388,11 +388,16 @@ height:80px;
 	border:1px solid #fff;
 	 position: relative;
 	 display: flex;
+	 max-width:375px;
+	 
 }
 .tag a{
 	color: #fff;
 	font-size: 16.5px;
 	font-family: futura;
+	
+
+	
 }
 .button_group button{
 	color: #fff;
@@ -496,7 +501,7 @@ width: 100%;
 	display: flex;
 	flex-wrap:wrap;
 	position:relative;
-	max-width: 310px;
+	max-width: 390px;
 }
 .category{
 	margin-right: 10px;
@@ -504,10 +509,13 @@ width: 100%;
 	position:relative;
 	display:flex;
 	padding-right:16px;
+	
 }
 #category_select{
 	width: 200px;
+	
 }
+
 .category img{
 	padding-right: 8px;
 }

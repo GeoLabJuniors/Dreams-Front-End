@@ -84,7 +84,13 @@ document.getElementById("category_select").addEventListener("change", function()
     var t = document.createTextNode(value);
     a.appendChild(t);		
     div.appendChild(a);
+	var z = document.createElement('div');
+		z.setAttribute('class','close');
+		div.appendChild(z);
     document.getElementById("category_tags").appendChild(div);
+	$(z).click(function(){
+    	$(div).remove();
+	});
 });
 </script>
 <script>

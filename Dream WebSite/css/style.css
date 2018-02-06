@@ -191,7 +191,7 @@ cursor: pointer;
 .log-in{
 	background:linear-gradient(90deg,#2D98D4 , #E81F64);
 	width:120px;
-	height:24px;
+	height:30px;
 	border-radius:5px;
 	margin-left:calc(50% - 60px);
 	font-size:20px;
@@ -204,14 +204,16 @@ cursor: pointer;
 	text-align:center;
 	cursor:pointer;
 }
-.forgot-pass{
-	display:block;
-	margin:auto;
-	color:white;
-	width:139px;
-	font-family:bnm;
-	font-size:20px;
-	font-weight:bold;
+.errormessage {
+    margin-top: 10px;
+    margin-bottom: 20px; 
+    font-family: bnm; 
+}
+
+.forgot_pass {
+    color: #fff;
+    margin-left: calc(50% - 60px);
+    font-family: bnm;
 }
 .fb-btn{
 	width:240px;

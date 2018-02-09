@@ -532,7 +532,7 @@ width: 100%;
 }
 .close {
     position:absolute;
-	margin-top:4px;
+	margin-top:5px;
     right:0px;
     width:16px;
     height:16px;
@@ -551,4 +551,12 @@ width: 100%;
 }
 .close:active {
     background-image: url("../images/icon/download-b.png");
+}
+.message {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    font-size: 25px;
+    text-align: center;
+    font-family: bnm;
+    color: white;
 }

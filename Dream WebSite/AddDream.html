@@ -15,7 +15,7 @@
 		</div>
 		<nav>
 			<a href="dreams.html"><img src="./images/nav/nav1-c.png"></a>
-			<a href="#"><img src="./images/nav/nav2.png"></a>
+			<a href="searchdream.html"><img src="./images/nav/nav2.png"></a>
 			<a href="map.html"><img src="./images/nav/nav3.png"></a>
 			<a href="signIn.html"><img src="./images/nav/nav4.png"></a>
 		</nav>
@@ -61,6 +61,7 @@
 		var z = document.createElement('div');
 		z.setAttribute('class','close');
 		var y = document.createElement('a');
+		z.innerHTML="x";
 		y.setAttribute('href',"#");
 		y.innerHTML = "#"+t.value;
 		x.appendChild(y);
@@ -85,8 +86,9 @@ document.getElementById("category_select").addEventListener("change", function()
     a.appendChild(t);		
     div.appendChild(a);
 	var z = document.createElement('div');
-		z.setAttribute('class','close');
-		div.appendChild(z);
+	z.setAttribute('class','close');
+	div.appendChild(z);
+	z.innerHTML="x";
     document.getElementById("category_tags").appendChild(div);
 	$(z).click(function(){
     	$(div).remove();

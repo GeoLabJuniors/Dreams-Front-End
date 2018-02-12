@@ -40,6 +40,7 @@ header{
 	display:flex;
 	justify-content:space-between;
 	align-items: flex-start;
+
 }
 
 .grad-border{
@@ -483,6 +484,8 @@ width: 100%;
 	display:flex;
 	justify-content: space-between;
 	height:60px;
+
+
 }
 .dream-inputs{
 	width:160px;	
@@ -605,4 +608,49 @@ width: 100%;
 	position: absolute;
 	left: 2px;
 	bottom: 6px;
+}
+
+.search_dream{
+	border:solid;
+	border-color:white;
+	border-width:thin;
+	
+	width:200px;
+	height:200px;
+	margin-top:20px;
+
+}
+.search_dream img{
+	width:120px;
+	height:120px;
+	margin-left:30px;
+	margin-top:20px;
+	 filter: white; 
+  -webkit-filter: grayscale(1); 
+  filter: grayscale(1);
+
+}
+.search_icon_text{
+	width:120px;
+	height:30px;
+	margin-top:12px;
+	
+}
+.search_icon_text span{
+	color:white;
+	
+		margin-left:10px;
+		font-family:myFont;
+		font-size:12px;
+	
+}
+.search_icon_text h5{
+		color:white;
+			margin-left:10px;
+			font-family:myFont;
+}
+
+.search_dream img:hover {
+  -webkit-filter: grayscale(0);
+  filter: none;
 }

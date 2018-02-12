@@ -63,7 +63,7 @@
 		var y = document.createElement('a');
 		z.innerHTML="x";
 		y.setAttribute('href',"#");
-		y.innerHTML = "#"+t.value;
+		y.innerHTML = "#"+t.value.trim();
 		x.appendChild(y);
 		x.appendChild(z);
 		document.getElementById("myList").appendChild(x);
@@ -94,6 +94,7 @@ document.getElementById("category_select").addEventListener("change", function()
     	$(div).remove();
 	});
 });
+
 </script>
 <script>
 $('.categories.category .hashtags.tag').hover(function(){

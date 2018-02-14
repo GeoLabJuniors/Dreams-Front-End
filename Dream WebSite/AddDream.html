@@ -90,6 +90,8 @@ document.getElementById("category_select").addEventListener("change", function()
 	div.appendChild(z);
 	z.innerHTML="x";
     document.getElementById("category_tags").appendChild(div);
+	var p = document.getElementById("category_select");
+        p.options.remove(p.selectedIndex);
 	$(z).click(function(){
     	$(div).remove();
 	});

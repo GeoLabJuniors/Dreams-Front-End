@@ -389,18 +389,14 @@ height:80px;
 	padding-right:16px;
 	border-radius: 3px;
 	border:1px solid #fff;
-	 position: relative;
-	 display: flex;
-	 max-width:375px;
-	 
+	position: relative;
+	display: flex;
+	max-width:375px;	 
 }
 .tag a{
 	color: #fff;
 	font-size: 16.5px;
-	font-family: futura;
-	
-
-	
+	font-family: futura;	
 }
 .button_group button{
 	color: #fff;
@@ -484,8 +480,6 @@ width: 100%;
 	display:flex;
 	justify-content: space-between;
 	height:60px;
-
-
 }
 .dream-inputs{
 	width:160px;	
@@ -509,7 +503,7 @@ width: 100%;
 	max-width: 390px;
 }
 .category{
-	margin-right: 10px;
+	margin-right: 13px;
 	margin-top: 10px;
 	position:relative;
 	display:flex;
@@ -522,13 +516,15 @@ width: 100%;
 	padding-right: 8px;
 }
 .category a{
-	margin-right:10px;
 	color: #fff;
 	font-size: 16.5px;
 	font-family: futura;
 }
 .mr-b{
 	margin-bottom: 100px;
+}
+.tag:hover{
+	opacity: 0.5;
 }
 .close {
     position:absolute;
@@ -542,7 +538,8 @@ width: 100%;
     -webkit-transition: opacity 150ms;
     text-align:right;
     border: 0;   
-    transition: 0.3s;    
+    transition: 0.3s;   
+    cursor: pointer;
 }
 .close:hover, .close:focus {	
 	cursor: pointer;

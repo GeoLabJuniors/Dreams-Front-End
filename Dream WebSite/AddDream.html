@@ -63,14 +63,26 @@
 		var y = document.createElement('a');
 		z.innerHTML="x";
 		y.setAttribute('href',"#");
+		y.setAttribute('id',"link_tag");
 		y.innerHTML = "#"+t.value.trim();
 		x.appendChild(y);
 		x.appendChild(z);
 		document.getElementById("myList").appendChild(x);
 		t.value = t.defaultValue;
-		$(z).click(function(){
+		$(x).click(function(){
     	$(x).remove();
 });
+		$('#link_tag').hover(
+    function() {
+        var $this = $(this); // caching $(this)
+        $this.data('initialText', $this.text());
+        $this.text("I'm replaced!");
+    },
+    function() {
+        var $this = $(this); // caching $(this)
+        $this.text($this.data('initialText'));
+    }
+);
 	}}	
 };//add categories
 document.getElementById("category_select").addEventListener("change", function(){
@@ -90,11 +102,12 @@ document.getElementById("category_select").addEventListener("change", function()
 	div.appendChild(z);
 	z.innerHTML="x";
     document.getElementById("category_tags").appendChild(div);
-	var p = document.getElementById("category_select");
-        p.options.remove(p.selectedIndex);
+   $("option[value='"+value+"']").attr("disabled","disabled")	
 	$(z).click(function(){
     	$(div).remove();
+    	$("option[value='"+value+"']").removeAttr("disabled","disabled");
 	});
+
 });
 </script>
 <script>
@@ -103,6 +116,7 @@ $('.categories.category .hashtags.tag').hover(function(){
         },function(){
             $(this).find('.close').animate({opacity:0},100)
         });
+
 </script>
 </body>
 </html>

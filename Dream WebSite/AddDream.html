@@ -95,7 +95,8 @@ document.getElementById("category_select").addEventListener("change", function()
    $("option[value='"+value+"']").remove();
 	$(z).click(function(){
     	$(div).remove();
-    	$('#category_select').append("<option value='"+value+"'>'+value+'</option>");
+    	$('#category_select').append("<option value='"+value+"'></option>");
+    	$('option[value="' + value + '"]').text(value);
 	});
 });
 </script>

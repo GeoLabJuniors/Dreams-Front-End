@@ -32,7 +32,7 @@
 <input type="text" placeholder="City" name="City" class="forms dream-inputs"/>
 <input type="text" placeholder="Date" name="Date" class="forms dream-inputs unstyledDateInput" onfocus="(this.type='date')" onblur="(this.type='text')" id="date"/>
 <select name="Category" class="forms dream-inputs" id="category_select">
-  <option selected disabled>Category</option>
+  <option selected>Category</option>
   <option value="option1">option1</option>
   <option value="option2">option2</option>
   <option value="option3">option3</option>
@@ -92,12 +92,10 @@ document.getElementById("category_select").addEventListener("change", function()
 	div.appendChild(z);
 	z.innerHTML="x";
     document.getElementById("category_tags").appendChild(div);
-   $("option[value='"+value+"']").attr("disabled","disabled")	
+   $("option[value='"+value+"']").remove();
 	$(z).click(function(){
-    	$(div).remove();
-    	$("option[value='"+value+"']").removeAttr("disabled","disabled");
+    	$(div).remove();	
 	});
-
 });
 </script>
 <script>

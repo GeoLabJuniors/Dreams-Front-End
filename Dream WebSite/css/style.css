@@ -558,7 +558,7 @@ width: 100%;
 }
 .search_nav{
 	margin-top: 50px;
-	margin-right: 25px;
+	padding-left: 25px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;

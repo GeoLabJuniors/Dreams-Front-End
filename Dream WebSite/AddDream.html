@@ -94,17 +94,18 @@ document.getElementById("category_select").addEventListener("change", function()
     document.getElementById("category_tags").appendChild(div);
    $("option[value='"+value+"']").remove();
 	$(z).click(function(){
-    	$(div).remove();	
+    	$(div).remove();
+    	$('#category_select').append("<option value='"+value+"'>'+value+'</option>");
 	});
 });
 </script>
 <script>
-/*$('.categories.category .hashtags.tag').hover(function(){
-    $(this).find('.close').animate({opacity:1},100)
-        },function(){
-            $(this).find('.close').animate({opacity:0},100)
-        });
-*/
+// $('.categories.category .hashtags.tag').hover(function(){
+//     $(this).find('.close').animate({opacity:1},100)
+//         },function(){
+//             $(this).find('.close').animate({opacity:0},100)
+//         });
+
 </script>
 </body>
 </html>

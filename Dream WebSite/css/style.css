@@ -644,3 +644,9 @@ width: 100%;
   -webkit-filter: grayscale(0);
   filter: none;
 }
+.category:hover div.close {
+	color: white;
+}
+.tag:hover div.close {
+	color: white;
+}

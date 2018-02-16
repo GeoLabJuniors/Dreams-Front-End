@@ -72,17 +72,7 @@
 		$(x).click(function(){
     	$(x).remove();
 });
-		$('#link_tag').hover(
-    function() {
-        var $this = $(this); // caching $(this)
-        $this.data('initialText', $this.text());
-        $this.text("I'm replaced!");
-    },
-    function() {
-        var $this = $(this); // caching $(this)
-        $this.text($this.data('initialText'));
-    }
-);
+		
 	}}	
 };//add categories
 document.getElementById("category_select").addEventListener("change", function(){
@@ -111,12 +101,12 @@ document.getElementById("category_select").addEventListener("change", function()
 });
 </script>
 <script>
-$('.categories.category .hashtags.tag').hover(function(){
+/*$('.categories.category .hashtags.tag').hover(function(){
     $(this).find('.close').animate({opacity:1},100)
         },function(){
             $(this).find('.close').animate({opacity:0},100)
         });
-
+*/
 </script>
 </body>
 </html>

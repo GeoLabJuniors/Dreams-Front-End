@@ -524,7 +524,7 @@ width: 100%;
 	margin-bottom: 100px;
 }
 .tag:hover{
-	opacity: 0.5;
+	//opacity: 0.5;
 }
 .close {
     position:absolute;

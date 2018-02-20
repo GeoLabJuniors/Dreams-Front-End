@@ -625,7 +625,8 @@ width: 100%;
 .search_icon_text{
 	width:120px;
 	height:30px;
-	margin-top:5px;	
+	margin-top:5px;
+	padding-left: 5px;	
 }
 .search_icon_text span{
 	color:white;
@@ -638,7 +639,7 @@ width: 100%;
 	margin-left:10px;
 	font-family:futura;
 	font-size:12.54px;
-	padding-left: 5px;
+	
 }
 .search_dream img:hover {
   -webkit-filter: grayscale(0);

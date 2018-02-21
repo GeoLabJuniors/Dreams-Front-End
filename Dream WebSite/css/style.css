@@ -347,12 +347,14 @@ cursor: pointer;
 	margin-left:20px;
 	cursor: pointer;
 }
+
 #category_icon img{width:80px;
 height:80px;	
 }
 #category_icon{
 	margin-top:30px;	
 }
+
 #detail p{
 	margin-top:15px;
 	font-size:19.17px;
@@ -428,6 +430,7 @@ width: 100%;
 	padding-bottom: 7px;
 	border-width: 2px;
 }
+
 .forms{
 	background-color:black;
 	font-weight:400;
@@ -464,9 +467,11 @@ width: 100%;
 	font-family:MyFont;
 	font-size:24px;	
 }
+
 #category_select option{
 	font-size: 18px;
 }
+
 .unstyledDateInput::-webkit-inner-spin-button,
 .unstyledDateInput::-webkit-calendar-picker-indicator {
     display: none;
@@ -480,12 +485,13 @@ width: 100%;
 	display:flex;
 	justify-content: space-between;
 	height:60px;
+	
 }
 .dream-inputs{
 	width:160px;	
 }
 #bt_cancel{
-	margin-right: 40px;
+	margin-right: 12px;
 }
 .mr-t{
 	margin-top: 70px !important;
@@ -500,17 +506,46 @@ width: 100%;
 	display: flex;
 	flex-wrap:wrap;
 	position:relative;
-	max-width: 390px;
+	max-width: 1052px;
+}
+#category_tags{
+	display:none;
+	
+	
 }
 .category{
-	margin-right: 13px;
-	margin-top: 10px;
-	position:relative;
-	display:flex;
-	padding-right:16px;	
+//	margin-right: 13px;
+	//margin-top: 10px;
+	//position:relative;
+	//display:flex;
+	//padding-right:16px;
+	width:120px;
+	height:120px;
+}
+	.category img{
+		width:80px;
+		height:80px;
+			filter: white; 
+  	-webkit-filter: grayscale(1); 
+  	filter: grayscale(1);	
+	}
+	.category img:hover {
+  -webkit-filter: grayscale(0);
+  filter: none;
 }
 #category_select{
-	width: 200px;	
+	//width: 200px;
+	border:2px solid transparent;
+	border-radius: 3px;
+	-moz-border-image: -moz-linear-gradient(left, #2D98D4 0%, #E81F64 100%);
+	-webkit-border-image: -webkit-linear-gradient(left, #2D98D4 0%, #E81F64 100%);
+	border-image: linear-gradient(to right,#2D98D4 0%, #E81F64 100%);
+	border-image-slice: 1;
+	border-left:none;
+	border-top:none;
+	border-right:none;
+border-width:thin;
+	
 }
 .category img{
 	padding-right: 8px;
@@ -628,6 +663,7 @@ width: 100%;
 	margin-top:5px;
 	padding-left: 5px;	
 }
+
 .search_icon_text span{
 	color:white;
 	margin-left:10px;
@@ -651,3 +687,14 @@ width: 100%;
 .tag:hover div.close {
 	color: white;
 }
+.Category_text{
+	width:80px;
+	height:80px;
+	word-wrap:break-word;
+	
+}
+.Category_text h5{
+color:white;
+	margin-left:10px;
+	//font-family:futura;
+font-size:12.54px;}

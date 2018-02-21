@@ -31,85 +31,73 @@
 <input type="text" placeholder="Hashtag" name="Hashtag" class="forms" onkeyup="myFunction(this,event)" style=" width:160px;"/>
 <input type="text" placeholder="City" name="City" class="forms dream-inputs"/>
 <input type="text" placeholder="Date" name="Date" class="forms dream-inputs unstyledDateInput" onfocus="(this.type='date')" onblur="(this.type='text')" id="date"/>
-<!--
-<select name="Category" class="forms dream-inputs" id="category_select">
-  <option selected>Category</option>
-  <option value="option1">option1</option>
-  <option value="option2">option2</option>
-  <option value="option3">option3</option>
-</select>
--->
-<button name="Category" class="forms dream-inputs"  id="category_select" onclick="show1();">
-Category
-</button>
+<button name="Category" class="forms dream-inputs" id="category_select">Category</button>
 </div>
-
-<div class="dis-flex-between mr-t">
-	
-	<div class="categories" id="category_tags">
+<div class="categories hide mr-t" id="category_tags">
     <div class="category">
-   <a href="#"> <img src="./images/dream-cards/bck-c.png"/></a>
+      <img src="./images/dream-cards/bck-m.png" class="category_icon">
     <div class="Category_text">
-<h5>Category1</h5>
-</div>
+      <h5>Category1</h5>
+    </div>
     </div>
     <div class="category">
-   <a href="#"> <img src="./images/dream-cards/bck-c.png"/></a>
+    <img src="./images/dream-cards/bck-m.png" class="category_icon">
+    <div class="Category_text">
+      <h5>Category1</h5>
+    </div>
+    </div>
+    <div class="category">
+    <img src="./images/dream-cards/bck-m.png" class="category_icon">
+    <div class="Category_text">
+      <h5>Category1</h5>
+    </div>
+    </div>
+    <div class="category">
+    <img src="./images/dream-cards/bck-m.png" class="category_icon">
+    <div class="Category_text">
+    <h5>Category1</h5>
+    </div>
+    </div>
+    <div class="category">
+    <img src="./images/dream-cards/bck-m.png" class="category_icon">
+    <div class="Category_text">
+      <h5>Category1</h5>
+    </div>
+    </div>
+    <div class="category">
+    <img src="./images/dream-cards/bck-m.png" class="category_icon">
       <div class="Category_text">
-<h5>Category1</h5>
-</div>
+      <h5>Category1</h5>
+      </div>
     </div>
     <div class="category">
-   <a href="#"> <img src="./images/dream-cards/bck-c.png"/></a>
+    <img src="./images/dream-cards/bck-m.png" class="category_icon">
       <div class="Category_text">
-<h5>Category1</h5>
-</div>
+      <h5>Category1</h5>
+      </div>
     </div>
     <div class="category">
-   <a href="#"> <img src="./images/dream-cards/bck-c.png"/></a>
+    <img src="./images/dream-cards/bck-m.png" class="category_icon">
       <div class="Category_text">
-<h5>Category1</h5>
-</div>
+      <h5>Category1123456</h5>
+      </div>
     </div>
     <div class="category">
-   <a href="#"> <img src="./images/dream-cards/bck-c.png"/></a>
-     <div class="Category_text">
-<h5>Category1</h5>
-</div>
+    <img src="./images/dream-cards/bck-m.png" class="category_icon">
+      <div class="Category_text">
+      <h5>Category1</h5>
+      </div>
     </div>
-    <div class="category">
-   <a href="#"> <img src="./images/dream-cards/bck-c.png"/></a>
-     <div class="Category_text">
-<h5>Category1</h5>
-</div>
+    <div class="category_close">
+      <button class="close_btn">X</button>
     </div>
-    <div class="category">
-   <a href="#"> <img src="./images/dream-cards/bck-c.png"/></a>
-     <div class="Category_text">
-<h5>Category1</h5>
-</div>
+    <div class="category_plus">
+      <button class="plus_btn">+</button>
     </div>
-    <div class="category">
-   <a href="#"> <img src="./images/dream-cards/bck-c.png"/></a>
-     <div class="Category_text">
-<h5>Category1123456</h5>
 </div>
-    </div>
-    <div class="category">
-   <a href="#"> <img src="./images/dream-cards/bck-c.png"/></a>
-     <div class="Category_text">
-<h5>Category1</h5>
-</div>
-    </div>
-	</div>
-</div>
-
-
 <!--end of dream details-->
 <div class="dis-flex-between mr-t">
-	<div class="hashtags" id="myList">
-	
-	</div>
+	<div class="hashtags" id="myList"></div>
 	<div class="categories" id="category_tags">
 	</div>
 </div>
@@ -141,48 +129,37 @@ Category
 });
 		
 	}}	
-};//add categories
-document.getElementById("category_select").addEventListener("change", function(){
-	var value = this.value;
-    var div = document.createElement("div");
-    div.setAttribute("class", "category");
-    var a = document.createElement("a");
-    a.setAttribute("href", "#");
-    var img = document.createElement("img");
-    img.setAttribute("src", "images/dream-cards/bck-s.png");
-    a.appendChild(img);	
-    var t = document.createTextNode(value);
-    a.appendChild(t);		
-    div.appendChild(a);
-	var z = document.createElement('div');
-	z.setAttribute('class','close');
-	div.appendChild(z);
-	z.innerHTML="x";
-    document.getElementById("category_tags").appendChild(div);
-   $("option[value='"+value+"']").remove();
-	$(z).click(function(){
-    	$(div).remove();
-    	$('#category_select').append("<option value='"+value+"'></option>");
-    	$('option[value="' + value + '"]').text(value);
-	});
-});
+};
 </script>
 <script>
-// $('.categories.category .hashtags.tag').hover(function(){
-//     $(this).find('.close').animate({opacity:1},100)
-//         },function(){
-//             $(this).find('.close').animate({opacity:0},100)
-//         });
+$( "#category_select" ).click(function() {
+  $( "#category_tags" ).toggleClass('hide');
+$('#Dream-details').fadeTo("slow", 0.1);
+ });
+$('img').click(function(){
+    $(this).toggleClass('active');
+});
+$( ".close_btn" ).click(function(){
+  $('#Dream-details').animate({ opacity: 1 });
+  $( "#category_tags" ).toggleClass('hide');
+});
+//<<clicking away>>>>
+// $('html').click(function() {
+//     $("#category_tags").hide();
+//  })
+// $('#category_select').click(function(e){
+//     e.stopPropagation();
+//  });
+// $('#category_select').click(function(e) {
+//  $( "#category_tags" ).toggleClass('hide');
+// $('#Dream-details').fadeTo("slow", 0.1);
+//  });
+//<<<<<different version>>>>
+// function show1(){
+//   document.getElementById('Dream-details').style.display ='none';
 
-
-
-
-function show1(){
-  document.getElementById('Dream-details').style.display ='none';
-
-  document.getElementById('category_tags').style.display ='flex';
-}
+//   document.getElementById('category_tags').style.display ='flex';
+// }
 </script>
-
 </body>
 </html>

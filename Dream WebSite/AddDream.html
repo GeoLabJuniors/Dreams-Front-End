@@ -141,7 +141,8 @@ $('img').click(function(){
 });
 $( ".close_btn" ).click(function(){
   $('#Dream-details').animate({ opacity: 1 });
-  $( "#category_tags" ).toggleClass('hide');
+ // $( "#category_tags" ).toggleClass('hide');
+  $("#category_tags").fadeOut(500);
 });
 //<<clicking away>>>>
 // $('html').click(function() {
@@ -161,5 +162,6 @@ $( ".close_btn" ).click(function(){
 //   document.getElementById('category_tags').style.display ='flex';
 // }
 </script>
+
 </body>
 </html>

@@ -135,7 +135,19 @@
 
 $( "#category_select" ).click(function() {
   $( "#category_tags" ).toggleClass('hide');
-$('#Dream-details').fadeTo("slow", 0.1);
+  var categ = $('#Dream-details');
+if(categ.css('opacity') === '0.1')
+  {
+    categ.css({
+      'opacity': '1',
+    });
+  }
+  else //We know the opacity is not 0.1 lets make it 0.1
+  {
+    categ.css({
+      'opacity': '0.1',
+    });
+  }
  });
 $('img').click(function(){
     $(this).toggleClass('active');

@@ -132,6 +132,7 @@
 };
 </script>
 <script>
+
 $( "#category_select" ).click(function() {
   $( "#category_tags" ).toggleClass('hide');
 $('#Dream-details').fadeTo("slow", 0.1);
@@ -142,6 +143,19 @@ $('img').click(function(){
 $( ".close_btn" ).click(function(){
   $('#Dream-details').animate({ opacity: 1 });
   $( "#category_tags" ).toggleClass('hide');
+});
+ $(window).click(function() {
+  $('#Dream-details').animate({ opacity: 1 });
+  $( "#category_tags" ).toggleClass('hide');
+});
+ $('img').click(function(event){
+    event.stopPropagation();
+});
+ $('.close_btn').click(function(event){
+    event.stopPropagation();
+});
+ $('#category_select').click(function(event){
+    event.stopPropagation();
 });
 // <<clicking away>>>>
 // $('html').click(function() {

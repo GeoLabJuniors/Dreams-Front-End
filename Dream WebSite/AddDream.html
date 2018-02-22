@@ -31,7 +31,7 @@
 <input type="text" placeholder="Hashtag" name="Hashtag" class="forms" onkeyup="myFunction(this,event)" style=" width:160px;"/>
 <input type="text" placeholder="City" name="City" class="forms dream-inputs"/>
 <input type="text" placeholder="Date" name="Date" class="forms dream-inputs unstyledDateInput" onfocus="(this.type='date')" onblur="(this.type='text')" id="date"/>
-<button name="Category" class="forms dream-inputs" id="category_select">Category</button>
+<input name="Category" placeholder="Category" class="forms dream-inputs" id="category_select">
 </div>
 <div class="categories hide mr-t" id="category_tags">
     <div class="category">
@@ -134,7 +134,7 @@
 <script>
 
 $( "#category_select" ).click(function() {
-  $( "#category_tags" ).toggleClass('hide');
+  $( "#category_tags" ).toggleClass('hide ');
   var categ = $('#Dream-details');
 if(categ.css('opacity') === '0.1')
   {

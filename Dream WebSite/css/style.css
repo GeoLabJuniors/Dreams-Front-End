@@ -682,6 +682,7 @@ width: 100%;
 #category_tags{
 	padding-top: 10px;
 }
+
 .hide{
 	display: none;
 }
@@ -725,4 +726,7 @@ width: 100%;
     background: transparent;
     border-image:linear-gradient(to right,#2D98D4 0%, #E81F64 100%);
     border-image-slice:1;
+}
+#category_select{
+	cursor: pointer;
 }

@@ -638,6 +638,8 @@ width: 100%;
 	filter: white; 
   	-webkit-filter: grayscale(1); 
   	filter: grayscale(1);
+	width:120px;
+	height:120px;
 }
 .search_icon_text{
 	width:120px;

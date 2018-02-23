@@ -681,6 +681,7 @@ width: 100%;
 }
 #category_tags{
 	padding-top: 10px;
+	//display:none;
 }
 
 .hide{

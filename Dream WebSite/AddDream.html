@@ -169,6 +169,49 @@ $( ".close_btn" ).click(function(){
  $('#category_select').click(function(event){
     event.stopPropagation();
 });
+
+//end of first version
+
+/* category with slide toggle
+$("#category_select").click(function(){
+        $("#category_tags").slideToggle("slow");
+		 var categ = $('#Dream-details');
+if(categ.css('opacity') === '0.1')
+  {
+    categ.css({
+      'opacity': '1',
+    });
+  }
+  else 
+  {
+    categ.css({
+      'opacity': '0.1',
+    });
+  }
+    });
+$('img').click(function(){
+  $(this).toggleClass('active');
+});
+$( ".close_btn" ).click(function(){
+  $('#Dream-details').animate({ opacity: 1 });
+  $( "#category_tags" ).slideToggle("slow");
+});
+ $(window).click(function() {
+  $('#Dream-details').animate({ opacity: 1 });
+  $( "#category_tags" ).addClass('hide');
+});
+ $('img').click(function(event){
+    event.stopPropagation();
+});
+ $('.close_btn').click(function(event){
+    event.stopPropagation();
+});
+ $('#category_select').click(function(event){
+    event.stopPropagation();
+});
+*/
+//end of  slider version
+
 // <<clicking away>>>>
 // $('html').click(function() {
 //     $("#category_tags").hide();

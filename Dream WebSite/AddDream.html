@@ -28,10 +28,10 @@
 <textarea placeholder="text" autofocus></textarea>
 </div><!--end of dream title-->
 <div id="Dream-details">
-<input type="text" placeholder="Hashtag" name="Hashtag" class="forms" onkeyup="myFunction(this,event)" style=" width:160px;"/>
-<input type="text" placeholder="City" name="City" class="forms dream-inputs"/>
-<input type="text" placeholder="Date" name="Date" class="forms dream-inputs unstyledDateInput" onfocus="(this.type='date')" onblur="(this.type='text')" id="date"/>
-<input name="Category" placeholder="Category" class="forms dream-inputs" id="category_select">
+<input type="text" placeholder="Hashtag" name="Hashtag" class="forms opacity" onkeyup="myFunction(this,event)" style=" width:160px;"/>
+<input type="text" placeholder="City" name="City" class="forms dream-inputs opacity"/>
+<input type="text" placeholder="Date" name="Date" class="forms dream-inputs unstyledDateInput opacity" onfocus="(this.type='date')" onblur="(this.type='text')" id="date"/>
+<input type ="buttton" name="Category" placeholder="Category" class="forms dream-inputs" id="category_select">
 </div>
 <div class="categories hide mr-t" id="category_tags">
     <div class="category">
@@ -135,7 +135,7 @@
 
 $( "#category_select" ).click(function() {
   $( "#category_tags" ).toggleClass('hide ');
-  var categ = $('#Dream-details');
+  var categ = $('.opacity');
 if(categ.css('opacity') === '0.1')
   {
     categ.css({
@@ -153,11 +153,11 @@ $('img').click(function(){
     $(this).toggleClass('active');
 });
 $( ".close_btn" ).click(function(){
-  $('#Dream-details').animate({ opacity: 1 });
+  $('.opacity').animate({ opacity: 1 });
   $( "#category_tags" ).toggleClass('hide');
 });
  $(window).click(function() {
-  $('#Dream-details').animate({ opacity: 1 });
+  $('.opacity').animate({ opacity: 1 });
   $( "#category_tags" ).addClass('hide');
 });
  $('img').click(function(event){

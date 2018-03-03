@@ -22,16 +22,74 @@
 		</nav>
 	</div>
 	<div class="wrapper search_nav">
-		<a href="#">icon</a>
-		<a href="#">tags</a>
-		<a href="#">country</a>
-		<a href="#">date</a>
+		<ul class="dis-flex-between">
+		<li id="icon_search">icon</li>
+		<li>tags</li>
+		<li>location</li>
+		<li>date</li>
+		<li>languange</li>
+		</ul>
 		<div class="search_box">
   		<label><img src="images/icon/search.png"></label>
   		<input type="search" name="search" id="tag_search" autofocus>
 		</div>
 	</div>
-	
+	<div class="wrapper icon_container">
+    <div class="category">
+      <img src="./images/dream-cards/bck-m.png" class="category_icon">
+    <div class="Category_text">
+      <h5>Category1</h5>
+    </div>
+    </div>
+    <div class="category">
+    <img src="./images/dream-cards/bck-m.png" class="category_icon">
+    <div class="Category_text">
+      <h5>Category1</h5>
+    </div>
+    </div>
+    <div class="category">
+    <img src="./images/dream-cards/bck-m.png" class="category_icon">
+    <div class="Category_text">
+      <h5>Category1</h5>
+    </div>
+    </div>
+    <div class="category">
+    <img src="./images/dream-cards/bck-m.png" class="category_icon">
+    <div class="Category_text">
+    <h5>Category1</h5>
+    </div>
+    </div>
+    <div class="category">
+    <img src="./images/dream-cards/bck-m.png" class="category_icon">
+    <div class="Category_text">
+      <h5>Category1</h5>
+    </div>
+    </div>
+    <div class="category">
+    <img src="./images/dream-cards/bck-m.png" class="category_icon">
+      <div class="Category_text">
+      <h5>Category1</h5>
+      </div>
+    </div>
+    <div class="category">
+    <img src="./images/dream-cards/bck-m.png" class="category_icon">
+      <div class="Category_text">
+      <h5>Category1</h5>
+      </div>
+    </div>
+    <div class="category">
+    <img src="./images/dream-cards/bck-m.png" class="category_icon">
+      <div class="Category_text">
+      <h5>Category1123456</h5>
+      </div>
+    </div>
+    <div class="category">
+    <img src="./images/dream-cards/bck-m.png" class="category_icon">
+      <div class="Category_text">
+      <h5>Category1</h5>
+      </div>
+    </div>
+	</div>
 </header>
 <main>
 <div class="wrapper-dream-body mr-b mr-t">
@@ -64,5 +122,10 @@
 </div>
 
 </main>
+<script>
+	$('.category_icon').click(function(){
+    $(this).toggleClass('active');
+});
+</script>
 </body>
 </html>

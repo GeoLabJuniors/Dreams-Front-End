@@ -92,10 +92,6 @@
     <div class="category_close">
       <button class="close_btn">X</button>
     </div>
-   <!-- <div class="category_plus">
-      <button class="plus_btn">+</button>
-    </div>
-    -->
 </div>
 <!--end of dream details-->
 <div class="dis-flex-between mr-t">
@@ -113,22 +109,22 @@
 	function myFunction(t,e){
 		if(e.keyCode==13|| e.keyCode==32){
 			if(t.value!=0){
-		var x = document.createElement('div');
-		x.setAttribute('class','tag');
-		var z = document.createElement('div');
-		z.setAttribute('class','close');
-		var y = document.createElement('a');
-		z.innerHTML="x";
-		y.setAttribute('href',"#");
-		y.setAttribute('id',"link_tag");
-		y.innerHTML = "#"+t.value.trim();
-		x.appendChild(y);
-		x.appendChild(z);
-		document.getElementById("myList").appendChild(x);
-		t.value = t.defaultValue;
-		$(x).click(function(){
-    	$(x).remove();
-});
+      		var x = document.createElement('div');
+      		x.setAttribute('class','tag');
+      		var z = document.createElement('div');
+      		z.setAttribute('class','close');
+      		var y = document.createElement('a');
+      		z.innerHTML="x";
+      		y.setAttribute('href',"#");
+      		y.setAttribute('id',"link_tag");
+      		y.innerHTML = "#"+t.value.trim();
+      		x.appendChild(y);
+      		x.appendChild(z);
+      		document.getElementById("myList").appendChild(x);
+      		t.value = t.defaultValue;
+      		$(x).click(function(){
+          	$(x).remove();
+    });
 		
 	}}	
 };
@@ -178,6 +174,7 @@ $( ".close_btn" ).click(function(){
 $("#category_select").click(function(){
         $("#category_tags").slideToggle("slow");
 		 var categ = $('#Dream-details');
+     
 if(categ.css('opacity') === '0.1')
   {
     categ.css({

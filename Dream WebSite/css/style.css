@@ -348,12 +348,10 @@ cursor: pointer;
 	cursor: pointer;
 }
 
-#category_icon img{width:80px;
+.category_icon img{width:80px;
 height:80px;	
 }
-#category_icon{
-	margin-top:30px;	
-}
+
 
 #detail p{
 	margin-top:15px;
@@ -771,7 +769,32 @@ width: 100%;
     background-color: #428bca
 }
 .icon_container{
-	padding-left: 25px;
-	display: flex;
+padding-left: 25px;
+	//display: flex;
+	//position:relative;
 	margin-top: 40px;
+	width:1052px;
+	}
+.show{
+	display: flex;
+	}
+.search_by_icon img{
+	width:80px;
+height:80px;	
+}
+.search_icon{
+	filter: white; 
+  	-webkit-filter: grayscale(1); 
+  	filter: grayscale(1);
+  	cursor: pointer;	
+}
+.search_types{
+	display: flex;
+	flex-wrap:wrap;
+	position:relative;
+	max-width: 1052px;
+}
+.search_by_icon{
+	width:120px;
+    height:120px;	
 }

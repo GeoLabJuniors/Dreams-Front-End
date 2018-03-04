@@ -34,62 +34,98 @@
   		<input type="search" name="search" id="tag_search" autofocus>
 		</div>
 	</div>
-	<div class="wrapper icon_container">
-    <div class="category">
-      <img src="./images/dream-cards/bck-m.png" class="category_icon">
+	<div class="wrapper hide icon_container">
+    <div class="search_by_icon">
+      <img src="./images/dream-cards/bck-m.png" class="search_icon">
     <div class="Category_text">
       <h5>Category1</h5>
     </div>
     </div>
-    <div class="category">
-    <img src="./images/dream-cards/bck-m.png" class="category_icon">
+    <div class="search_by_icon">
+    <img src="./images/dream-cards/bck-m.png" class="search_icon">
     <div class="Category_text">
       <h5>Category1</h5>
     </div>
     </div>
-    <div class="category">
-    <img src="./images/dream-cards/bck-m.png" class="category_icon">
+    <div class="search_by_icon">
+    <img src="./images/dream-cards/bck-m.png" class="search_icon">
     <div class="Category_text">
       <h5>Category1</h5>
     </div>
     </div>
-    <div class="category">
-    <img src="./images/dream-cards/bck-m.png" class="category_icon">
+    <div class="search_by_icon">
+    <img src="./images/dream-cards/bck-m.png" class="search_icon">
     <div class="Category_text">
     <h5>Category1</h5>
     </div>
     </div>
-    <div class="category">
-    <img src="./images/dream-cards/bck-m.png" class="category_icon">
+    <div class="search_by_icon">
+    <img src="./images/dream-cards/bck-m.png" class="search_icon">
     <div class="Category_text">
       <h5>Category1</h5>
     </div>
     </div>
-    <div class="category">
-    <img src="./images/dream-cards/bck-m.png" class="category_icon">
+    <div class="search_by_icon">
+    <img src="./images/dream-cards/bck-m.png" class="search_icon">
       <div class="Category_text">
       <h5>Category1</h5>
       </div>
     </div>
-    <div class="category">
-    <img src="./images/dream-cards/bck-m.png" class="category_icon">
+    <div class="search_by_icon">
+    <img src="./images/dream-cards/bck-m.png" class="search_icon">
       <div class="Category_text">
       <h5>Category1</h5>
       </div>
     </div>
-    <div class="category">
-    <img src="./images/dream-cards/bck-m.png" class="category_icon">
+    <div class="search_by_icon">
+    <img src="./images/dream-cards/bck-m.png" class="search_icon">
       <div class="Category_text">
       <h5>Category1123456</h5>
       </div>
     </div>
-    <div class="category">
-    <img src="./images/dream-cards/bck-m.png" class="category_icon">
+    <div class="search_by_icon">
+    <img src="./images/dream-cards/bck-m.png" class="search_icon">
       <div class="Category_text">
       <h5>Category1</h5>
       </div>
     </div>
+     <div class="search_by_icon">
+    <img src="./images/dream-cards/bck-m.png" class="search_icon">
+      <div class="Category_text">
+      <h5>Category1</h5>
+      </div>
+    </div>
+     <div class="search_by_icon">
+    <img src="./images/dream-cards/bck-m.png" class="search_icon">
+      <div class="Category_text">
+      <h5>Category177</h5>
+      </div>
+    </div>
+    <div class="search_by_icon">
+    <img src="./images/dream-cards/bck-m.png" class="search_icon">
+      <div class="Category_text">
+      <h5>Category177</h5>
+      </div>
+    </div>
+    <div class="search_by_icon">
+    <img src="./images/dream-cards/bck-m.png" class="search_icon">
+      <div class="Category_text">
+      <h5>Category177</h5>
+      </div>
+    </div>
+    <div class="search_by_icon">
+    <img src="./images/dream-cards/bck-m.png" class="search_icon">
+      <div class="Category_text">
+      <h5>Category177</h5>
+      </div>
+    </div>
 	</div>
+    
+    <div class="wrapper hide search_types">
+    
+    </div>
+    
+    
 </header>
 <main>
 <div class="wrapper-dream-body mr-b mr-t">
@@ -123,9 +159,17 @@
 
 </main>
 <script>
-	$('.category_icon').click(function(){
-    $(this).toggleClass('active');
+	$('#icon_search').click(function(){
+  $( ".icon_container" ).addClass('show');
+});
+
+$(' .search_by_icon img').click(function(){
+$(this).toggleClass('active');
+$( ".icon_container" ).toggleClass('show');
 });
 </script>
+
+
+
 </body>
 </html>

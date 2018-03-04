@@ -122,9 +122,88 @@
 	</div>
     
     <div class="wrapper hide search_types">
-    
+    <ul style="width:1052px;">
+    <li>
+    <div class="sponImg">
+    <img src="./images/dream-cards/bck-c.png"/>
     </div>
+    </li>
     
+    <li>
+    <div class="sponImg">
+    <img src="./images/dream-cards/bck-c.png"/>
+    </div>
+    </li>
+    <li>
+    <div class="sponImg">
+    <img src="./images/dream-cards/bck-c.png"/>
+    </div>
+    </li>
+    <li>
+    <div class="sponImg">
+    <img src="./images/dream-cards/bck-c.png"/>
+    </div>
+    </li>
+    <li>
+    <div class="sponImg">
+    <img src="./images/dream-cards/bck-c.png"/>
+    </div>
+    </li>
+    <li>
+    <div class="sponImg">
+    <img src="./images/dream-cards/bck-c.png"/>
+    </div>
+    </li>
+    <li>
+    <div class="sponImg">
+    <img src="./images/dream-cards/bck-c.png"/>
+    </div>
+    </li>
+    <li>
+    <div class="sponImg">
+    <img src="./images/dream-cards/bck-c.png"/>
+    </div>
+    </li>
+    <li>
+    <div class="sponImg">
+    <img src="./images/dream-cards/bck-c.png"/>
+    </div>
+    </li>
+    <li>
+    <div class="sponImg">
+    <img src="./images/dream-cards/bck-c.png"/>
+    </div>
+    </li>
+    <li>
+    <div class="sponImg">
+    <img src="./images/dream-cards/bck-c.png"/>
+    </div>
+    </li>
+    <li>
+    <div class="sponImg">
+    <img src="./images/dream-cards/bck-c.png"/>
+    </div>
+    </li>
+    <li>
+    <div class="sponImg">
+    <img src="./images/dream-cards/bck-c.png"/>
+    </div>
+    </li>
+    <li>
+    <div class="sponImg">
+    <img src="./images/dream-cards/bck-c.png"/>
+    </div>
+    </li>
+    
+    </ul>
+    <div class="prev" onclick="onLeft();" style="opacity: 1;">
+                                <i class="fa fa-angle-left fa-5x arrL"></i>
+                            </div>
+                            <div class="next" onclick="onRight();" style=" opacity: 1;">
+                                <i class="fa fa-angle-right fa-5x arrR"></i>
+                            </div>
+    </div>
+  
     
 </header>
 <main>
@@ -169,7 +248,35 @@ $( ".icon_container" ).toggleClass('show');
 });
 </script>
 
+<script>
+var search_typesUL = $('.search_types ul').children().length *80;
+$('.search_types ul').css('width', search_typesUL + 'px');
 
+var search_types_box = $('.search_types').width();
+var con = 0;
+search_typesUL = search_typesUL - search_types_box;
+function onRight(){
+     
+    if(con < search_typesUL){
+        con += 80;
+        $('.search_types ul').css('right', con + 'px');
+    } 
+
+   // $('.prev').css('display','block');
+   // $('.prev').animate({'opacity':'1'});
+    
+}
+function onLeft(){
+    if(con > 0){
+        con -= 80;
+        $('.search_types ul').css('left', con + 'px');
+       
+    }else{
+        $('.prev').css('display','none');
+    }
+  }
+
+</script>
 
 </body>
 </html>

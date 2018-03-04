@@ -350,7 +350,7 @@ cursor: pointer;
 	cursor: pointer;
 }
 
-.category_icon img{width:80px;
+#category_icon img{width:80px;
 height:80px;	
 }
 
@@ -509,6 +509,7 @@ width: 100%;
 .category{
 	width:120px;
 	height:120px;
+	display:inline-block;
 }
 .category_icon{
 	filter: white; 
@@ -811,6 +812,7 @@ height:80px;
   	filter: grayscale(1);
   	cursor: pointer;	
 }
+
 .search_types{
 	display: flex;
 	
@@ -856,11 +858,7 @@ height:80px;
 	background-color:red;
     
 }
-/*
-.arrR:hover{
-    color: rgba(0,0,0,.7);
-}
-*/
+
 .arrR{
   //  margin-top:50px;
     color: rgba(0,0,0,.2);
@@ -887,7 +885,4 @@ height:80px;
    // top:65px;
 	background-color:red;
 }
-/*
-.arrL:hover{
-    color: rgba(0,0,0,.7);
-}
+

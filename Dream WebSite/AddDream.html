@@ -34,7 +34,8 @@
 <input type="text" placeholder="Date" name="Date" class="forms dream-inputs unstyledDateInput opacity" onfocus="(this.type='date')" onblur="(this.type='text')" id="date"/>
 <input type ="buttton" name="Category" placeholder="Category" class="forms dream-inputs" id="category_select">
 </div>
-<div class="categories hide mr-t" id="category_tags">
+<div class="hide mr-t" id="category_tags">
+  <div class="categories">
     <div class="category">
       <img src="./images/dream-cards/bck-m.png" class="category_icon">
     <div class="Category_text">
@@ -92,6 +93,7 @@
     <div class="category_close">
       <button class="close_btn">X</button>
     </div>
+    </div>
 </div>
 <!--end of dream details-->
 <div class="dis-flex-between mr-t">
@@ -130,9 +132,8 @@
 };
 </script>
 <script>
-/*
 $( "#category_select" ).click(function() {
-  $( "#category_tags" ).toggleClass('hide');
+  $( "#category_tags" ).slideToggle();
   var categ = $('.opacity');
 if(categ.css('opacity') === '0.1')
   {
@@ -152,11 +153,11 @@ $('img').click(function(){
 });
 $( ".close_btn" ).click(function(){
   $('.opacity').animate({ opacity: 1 });
-  $( "#category_tags" ).toggleClass('hide');
+  $( "#category_tags" ).slideUp();
 });
  $(window).click(function() {
   $('.opacity').animate({ opacity: 1 });
-  $( "#category_tags" ).addClass('hide');
+  $( "#category_tags" ).slideUp();
 });
  $('img').click(function(event){
     event.stopPropagation();
@@ -167,47 +168,47 @@ $( ".close_btn" ).click(function(){
  $('#category_select').click(function(event){
     event.stopPropagation();
 });
-*/
+
 //end of first version
 
 // category with slide toggle
-$("#category_select").click(function(){
-        $("#category_tags").slideToggle("fast");
-		  var categ = $('.opacity');
-if(categ.css('opacity') === '0.1')
-  {
-    categ.css({
-      'opacity': '1',
-    });
-  }
-  else //We know the opacity is not 0.1 lets make it 0.1
-  {
-    categ.css({
-      'opacity': '0.1',
-    });
-  }
- });
-$('img').click(function(){
-  $(this).toggleClass('active');
-});
-$( ".close_btn" ).click(function(){
-  $('#Dream-details').animate({ opacity: 1 });
-  $( "#category_tags" ).slideUp(1000);
-});
- $(window).click(function() {
-  $('#Dream-details').animate({ opacity: 1 });
- // $( "#category_tags" ).addClass('hide');
-   $( "#category_tags" ).slideToggle("fast");
-});
- $('img').click(function(event){
-    event.stopPropagation();
-});
- $('.close_btn').click(function(event){
-    event.stopPropagation();
-});
- $('#category_select').click(function(event){
-    event.stopPropagation();
-});
+// $("#category_select").click(function(){
+//         $("#category_tags").slideToggle("fast");
+// 		  var categ = $('.opacity');
+// if(categ.css('opacity') === '0.1')
+//   {
+//     categ.css({
+//       'opacity': '1',
+//     });
+//   }
+//   else //We know the opacity is not 0.1 lets make it 0.1
+//   {
+//     categ.css({
+//       'opacity': '0.1',
+//     });
+//   }
+//  });
+// $('img').click(function(){
+//   $(this).toggleClass('active');
+// });
+// $( ".close_btn" ).click(function(){
+//   $('#Dream-details').animate({ opacity: 1 });
+//   $( "#category_tags" ).slideUp(1000);
+// });
+//  $(window).click(function() {
+//   $('#Dream-details').animate({ opacity: 1 });
+//  // $( "#category_tags" ).addClass('hide');
+//    $( "#category_tags" ).slideToggle("fast");
+// });
+//  $('img').click(function(event){
+//     event.stopPropagation();
+// });
+//  $('.close_btn').click(function(event){
+//     event.stopPropagation();
+// });
+//  $('#category_select').click(function(event){
+//     event.stopPropagation();
+// });//slide toggle end
 // $('#category_select').click(function(e) {
 //  $( "#category_tags" ).toggleClass('hide');
 // $('#Dream-details').fadeTo("slow", 0.1);

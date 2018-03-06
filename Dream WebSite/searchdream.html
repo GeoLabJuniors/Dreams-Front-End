@@ -1,144 +1,315 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>სიზმრების საიტი</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/slick.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src="js/jquery.js"></script>
+  <title>სიზმრების საიტი</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/app.js"></script>
 </head>
+
 <body>
-<header>
-	<div class="wrapper dis-flex-between">
-		<div class="logo">
-			<a href="index.html"><img src="images/logo/logo.png"></a>
-		</div>
-		<nav>
-			<a href="dreams.html"><img src="./images/nav/nav1.png"></a>
-			<a href="searchdream.html"><img src="./images/nav/nav2-c.png"></a>
-			<a href="map.html"><img src="./images/nav/nav3.png"></a>
-			<a href="signIn.html"><img src="./images/nav/nav4.png"></a>
-		</nav>
-	</div>
-	<div class="wrapper search_nav">
-		<ul class="dis-flex-between">
-		<li id="icon_search">icon</li>
-		<li>tags</li>
-		<li>location</li>
-		<li>date</li>
-		<li>languange</li>
-		</ul>
-		<div class="search_box">
-  		<label><img src="images/icon/search.png"></label>
-  		<input type="search" name="search" id="tag_search" autofocus>
-		</div>
-	</div>
-	<div class="wrapper icon_container center slider">
-    <div class="category">
-      <img src="./images/dream-cards/bck-m.png" class="category_icon">
-    <div class="Category_text">
-      <h5>Category1</h5>
+  <header>
+    <div class="wrapper dis-flex-between">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo/logo.png">
+        </a>
+      </div>
+      <nav>
+        <a href="dreams.html">
+          <img src="./images/nav/nav1.png">
+        </a>
+        <a href="searchdream.html">
+          <img src="./images/nav/nav2-c.png">
+        </a>
+        <a href="map.html">
+          <img src="./images/nav/nav3.png">
+        </a>
+        <a href="signIn.html">
+          <img src="./images/nav/nav4.png">
+        </a>
+      </nav>
     </div>
-    </div>
-    <div class="category">
-    <img src="./images/dream-cards/bck-m.png" class="category_icon">
-    <div class="Category_text">
-      <h5>Category1</h5>
-    </div>
-    </div>
-    <div class="category">
-    <img src="./images/dream-cards/bck-m.png" class="category_icon">
-    <div class="Category_text">
-      <h5>Category1</h5>
-    </div>
-    </div>
-    <div class="category">
-    <img src="./images/dream-cards/bck-m.png" class="category_icon">
-    <div class="Category_text">
-    <h5>Category1</h5>
-    </div>
-    </div>
-    <div class="category">
-    <img src="./images/dream-cards/bck-m.png" class="category_icon">
-    <div class="Category_text">
-      <h5>Category1</h5>
-    </div>
-    </div>
-    <div class="category">
-    <img src="./images/dream-cards/bck-m.png" class="category_icon">
-      <div class="Category_text">
-      <h5>Category1</h5>
+    <div class="wrapper search_nav">
+      <ul class="dis-flex-between">
+        <li id="icon_search">icon</li>
+        <li>tags</li>
+        <li>location</li>
+        <li>date</li>
+        <li>languange</li>
+      </ul>
+      <div class="search_box">
+        <label>
+          <img src="images/icon/search.png">
+        </label>
+        <input type="search" name="search" id="tag_search" autofocus>
       </div>
     </div>
-    <div class="category">
-    <img src="./images/dream-cards/bck-m.png" class="category_icon">
-      <div class="Category_text">
-      <h5>Category1</h5>
+
+    <!--
+    <div class="wrapper hide icon_container">
+      <div class="search_by_icon">
+        <img src="./images/dream-cards/bck-m.png" class="search_icon">
+        <div class="Category_text">
+          <h5>Category1</h5>
+        </div>
+      </div>
+      <div class="search_by_icon">
+        <img src="./images/dream-cards/bck-m.png" class="search_icon">
+        <div class="Category_text">
+          <h5>Category1</h5>
+        </div>
+      </div>
+      <div class="search_by_icon">
+        <img src="./images/dream-cards/bck-m.png" class="search_icon">
+        <div class="Category_text">
+          <h5>Category1</h5>
+        </div>
+      </div>
+      <div class="search_by_icon">
+        <img src="./images/dream-cards/bck-m.png" class="search_icon">
+        <div class="Category_text">
+          <h5>Category1</h5>
+        </div>
+      </div>
+      <div class="search_by_icon">
+        <img src="./images/dream-cards/bck-m.png" class="search_icon">
+        <div class="Category_text">
+          <h5>Category1</h5>
+        </div>
+      </div>
+      <div class="search_by_icon">
+        <img src="./images/dream-cards/bck-m.png" class="search_icon">
+        <div class="Category_text">
+          <h5>Category1</h5>
+        </div>
+      </div>
+      <div class="search_by_icon">
+        <img src="./images/dream-cards/bck-m.png" class="search_icon">
+        <div class="Category_text">
+          <h5>Category1</h5>
+        </div>
+      </div>
+      <div class="search_by_icon">
+        <img src="./images/dream-cards/bck-m.png" class="search_icon">
+        <div class="Category_text">
+          <h5>Category1123456</h5>
+        </div>
+      </div>
+      <div class="search_by_icon">
+        <img src="./images/dream-cards/bck-m.png" class="search_icon">
+        <div class="Category_text">
+          <h5>Category1</h5>
+        </div>
+      </div>
+      <div class="search_by_icon">
+        <img src="./images/dream-cards/bck-m.png" class="search_icon">
+        <div class="Category_text">
+          <h5>Category1</h5>
+        </div>
+      </div>
+      <div class="search_by_icon">
+        <img src="./images/dream-cards/bck-m.png" class="search_icon">
+        <div class="Category_text">
+          <h5>Category177</h5>
+        </div>
+      </div>
+      <div class="search_by_icon">
+        <img src="./images/dream-cards/bck-m.png" class="search_icon">
+        <div class="Category_text">
+          <h5>Category177</h5>
+        </div>
+      </div>
+      <div class="search_by_icon">
+        <img src="./images/dream-cards/bck-m.png" class="search_icon">
+        <div class="Category_text">
+          <h5>Category177</h5>
+        </div>
+      </div>
+      <div class="search_by_icon">
+        <img src="./images/dream-cards/bck-m.png" class="search_icon">
+        <div class="Category_text">
+          <h5>Category177</h5>
+        </div>
       </div>
     </div>
-    <div class="category">
-    <img src="./images/dream-cards/bck-m.png" class="category_icon">
-      <div class="Category_text">
-      <h5>Category1123456</h5>
+
+-->
+
+    <div class="prev" onclick="onLeft();" style="opacity: 1;">
+      <i class="fa fa-angle-left fa-5x arrL"></i>
+    </div>
+    <div class="next" onclick="onRight();" style=" opacity: 1;">
+      <i class="fa fa-angle-right fa-5x arrR"></i>
+    </div>
+
+
+    <div class="wrapper hide search_types">
+      <ul class="slider-ul">
+        <li>
+          <img src="./images/dream-cards/bck-c.png" />
+        </li>
+
+        <li>
+          <img src="./images/dream-cards/bck-c.png" />
+        </li>
+        <li>
+          <img src="./images/dream-cards/bck-c.png" />
+        </li>
+
+        <li>
+          <img src="./images/dream-cards/bck-c.png" />
+        </li>
+        <li>
+          <img src="./images/dream-cards/bck-c.png" />
+        </li>
+
+        <li>
+          <img src="./images/dream-cards/bck-c.png" />
+        </li>
+        <li>
+          <img src="./images/dream-cards/bck-c.png" />
+        </li>
+
+        <li>
+          <img src="./images/dream-cards/bck-c.png" />
+        </li>
+        <li>
+          <img src="./images/dream-cards/bck-c.png" />
+        </li>
+
+        <li>
+          <img src="./images/dream-cards/bck-c.png" />
+        </li>
+        <li>
+          <img src="./images/dream-cards/bck-c.png" />
+        </li>
+
+        <li>
+          <img src="./images/dream-cards/bck-c.png" />
+        </li>
+        <li>
+          <img src="./images/dream-cards/bck-c.png" />
+        </li>
+
+        <li>
+          <img src="./images/dream-cards/bck-c.png" />
+        </li>
+        <li>
+          <img src="./images/dream-cards/bck-c.png" />
+        </li>
+
+        <li>
+          <img src="./images/dream-cards/bck-c.png" />
+        </li>
+
+      </ul>
+    </div>
+
+
+  </header>
+  <main>
+    <div class="wrapper-dream-body mr-b mr-t">
+      <div class="dis-flex-between">
+        <div class="search_dream">
+          <a href="#">
+            <img src="./images/dream-cards/bck-c.png" />
+          </a>
+          <div class="search_icon_text">
+            <h5>Dream</h5>
+            <span>Some text here</span>
+          </div>
+        </div>
+
+        <div class="search_dream">
+          <a href="#">
+            <img src="./images/dream-cards/bck-c.png" />
+          </a>
+          <div class="search_icon_text">
+            <h5>Dream</h5>
+            <span>Some text here</span>
+          </div>
+        </div>
+        <div class="search_dream">
+          <a href="#">
+            <img src="./images/dream-cards/bck-c.png" />
+          </a>
+          <div class="search_icon_text">
+            <h5>Dream</h5>
+            <span>Some text here</span>
+          </div>
+        </div>
+
+
       </div>
     </div>
-    <div class="category">
-    <img src="./images/dream-cards/bck-m.png" class="category_icon">
-      <div class="Category_text">
-      <h5>Category1</h5>
-      </div>
-    </div>
-    <div class="category">
-    <img src="./images/dream-cards/bck-m.png" class="category_icon">
-      <div class="Category_text">
-      <h5>Category1</h5>
-      </div>
-    </div>
-    <div class="category">
-    <img src="./images/dream-cards/bck-m.png" class="category_icon">
-      <div class="Category_text">
-      <h5>Category1</h5>
-      </div>
-    </div>
-    <div>
-    <img src="./images/dream-cards/bck-m.png" class="category_icon">
-      <div class="Category_text">
-      <h5>Category1</h5>
-      </div>
-    </div>
-	</div><!--icon category ends here-->
-</header>
-<main>
-<div class="wrapper-dream-body mr-b mr-t">
-<div class="dis-flex-between">
-<div class="search_dream">
-<a href="#"><img src="./images/dream-cards/bck-c.png"/></a>
-<div class="search_icon_text">
-<h5>Dream</h5>
-<span>Some text here</span>
-</div>
-</div>
-<div class="search_dream">
-<a href="#"><img src="./images/dream-cards/bck-c.png"/></a>
-<div class="search_icon_text">
-<h5>Dream</h5>
-<span>Some text here</span>
-</div>
-</div>
-<div class="search_dream">
-<a href="#"><img src="./images/dream-cards/bck-c.png"/></a>
-<div class="search_icon_text">
-<h5>Dream</h5>
-<span>Some text here</span>
-</div>
-</div>
-</div>
-</div>
-</main>
-<script src="js/slick.min.js"></script>
-<script src="js/app.js"></script>
-<script>
+
+  </main>
+  <script>
+  	/*
+    $('#icon_search').click(function () {
+      $(".icon_container").addClass('show');
+    });
+
+    $(' .search_by_icon img').click(function () {
+      $(this).toggleClass('active');
+      $(".icon_container").toggleClass('show');
+    });
+    */
+  </script>
+
+  <script>
+    var search_typesUL = $('.slider-ul').children().length * 104;
+    $('.slider-ul').css('width', search_typesUL + 'px');
+    console.log($('.slider-ul').children().length)
+
+  
+
+    function onRight() {
+      currentValue = parseInt($('.slider-ul').css('transform').split(',')[4]);
+      
+      con = currentValue ? currentValue - 120 : -120;
+      
+      if (Math.abs(con) + 1020 < search_typesUL) {
+        console.log(con)
+        $('.slider-ul').css('transform', 'translate(' + con + 'px, 0)');
+      } else {
+        // $('.next').css('display','none');
+      }
+
+    }
+
+    function onLeft() {
+      currentValue = parseInt($('.slider-ul').css('transform').split(',')[4]);
+      
+      con = currentValue ? currentValue + 120 : 0;
+      
+      
+      if (con < 0) {
+        console.log(con)
+        $('.slider-ul').css('transform', 'translate(' + con + 'px, 0)');
+      } else {
+        // $('.next').css('display','none');
+        $('.slider-ul').css('transform', 'translate(' + 0 + 'px, 0)');
+      }
+
+    }
+
+
+ $('#icon_search').click(function () {
+      $(".search_types").addClass('show');
+    });
+
+    $(' .slider-ul img').click(function () {
+      $(this).toggleClass('active');
+      $(".search_types").toggleClass('show');
+    });
+
+
+    /* slick
 $(document).on('ready', function() { $(".center").slick({
         dots: false,
         infinite: true,
@@ -154,6 +325,11 @@ $('.category_icon').click(function(){
   $(this).toggleClass('active');
   $(".icon_container").slideUp();
 });
-</script>
+
+    */
+
+  </script>
+
 </body>
+
 </html>

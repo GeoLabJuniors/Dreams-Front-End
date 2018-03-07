@@ -58,71 +58,100 @@
       <ul class="slider-ul">
         <li>
           <img src="./images/dream-cards/bck-c.png" class="category_icon">
-           <h5>Category1</h5>
+           <h5 class="category_title">Category1</h5>
         </li>
         <li>
           <img src="./images/dream-cards/bck-c.png" class="category_icon">
-           <h5>Category2</h5>
+           <h5 class="category_title">Category2</h5>
         </li>
         <li>
           <img src="./images/dream-cards/bck-c.png" class="category_icon">
-           <h5>Category3</h5>
+           <h5 class="category_title">Category3</h5>
         </li>
         <li>
           <img src="./images/dream-cards/bck-c.png" class="category_icon">
-           <h5>Category4</h5>
+           <h5 class="category_title">Category4</h5>
         </li>
         <li>
           <img src="./images/dream-cards/bck-c.png" class="category_icon">
-           <h5>Category5</h5>
+           <h5 class="category_title">Category5</h5>
         </li>
         <li>
           <img src="./images/dream-cards/bck-c.png" class="category_icon">
-           <h5>Category6</h5>
+           <h5 class="category_title">Category6</h5>
         </li>
         <li>
           <img src="./images/dream-cards/bck-c.png" class="category_icon">
-           <h5>Category7</h5>
+           <h5 class="category_title">Category7</h5>
         </li>
         <li>
           <img src="./images/dream-cards/bck-c.png" class="category_icon">
-           <h5>Category8</h5>
+           <h5 class="category_title">Category8</h5>
         </li>
         <li>
           <img src="./images/dream-cards/bck-c.png" class="category_icon">
-           <h5>Category4447</h5>
+           <h5 class="category_title">Category4447</h5>
         </li>
         <li>
           <img src="./images/dream-cards/bck-c.png" class="category_icon">
-           <h5>Category177</h5>
+           <h5 class="category_title">Category177</h5>
         </li>
         <li>
           <img src="./images/dream-cards/bck-c.png" class="category_icon">
-           <h5>Category177</h5>
+           <h5 class="category_title">Category177</h5>
         </li>
         <li>
           <img src="./images/dream-cards/bck-c.png" class="category_icon">
-           <h5>Category177</h5>
+           <h5 class="category_title">Category177</h5>
         </li>
         <li>
           <img src="./images/dream-cards/bck-c.png" class="category_icon">
-           <h5>Category177</h5>
+           <h5 class="category_title">Category177</h5>
         </li>
         <li>
           <img src="./images/dream-cards/bck-c.png" class="category_icon">
-           <h5>Category177</h5>
+           <h5 class="category_title">Category177</h5>
         </li>
         <li>
           <img src="./images/dream-cards/bck-c.png" class="category_icon">
-           <h5>Category177</h5>
+           <h5 class="category_title">Category177</h5>
         </li>
         <li>
           <img src="./images/dream-cards/bck-c.png" class="category_icon">
-           <h5>Category177</h5>
+           <h5 class="category_title">Category177</h5>
         </li>
       </ul>
     </div>
   </header>
+<div class="wrapper menu_container">
+	<div class="icons_container dis-flex-between">
+		<div class="category_wrap">category</div>
+		<div class="category_wrap">category</div>
+		<div class="category_wrap">category</div>
+		<div class="category_wrap">category</div>
+	</div>
+	<div class="tags_container dis-flex-between">
+		<div class="category_wrap">tag</div>
+		<div class="category_wrap">tag</div>
+		<div class="category_wrap">tag</div>
+		<div class="category_wrap">tag</div>
+	</div>
+	<div class="location_container dis-flex-between">
+		<div class="category_wrap">georgia</div>
+		<div class="category_wrap">georgia</div>
+		<div class="category_wrap">georgia</div>
+		<div class="category_wrap">georgia</div>
+	</div>
+	<div class="date_container dis-flex-between">
+		<div class="category_wrap">3/7/2018</div>
+		<div class="category_wrap">3/7/2018</div>
+		<div class="category_wrap">3/7/2018</div>
+		<div class="category_wrap">3/7/2018</div>
+	</div>
+	<div class="clear_all">
+		<span>Clear All</span>
+	</div>
+</div><!--choosen categories end-->
 <main>
     <div class="wrapper-dream-body mr-b mr-t">
       <div class="dis-flex-between">
@@ -190,17 +219,23 @@
       }
 
     }
-
+//sliding icon menu
 $(".search_types").hide();
  $('#icon_search').click(function () {
     $(".search_types").slideToggle();
     $('#icon_search').toggleClass('active');
+    $(".menu_container").slideToggle();
     });
-
+    
     $(' .slider-ul img').click(function () {
       $(this).toggleClass('active');
       $(".search_types").slideUp();
     });
+    //adding clicked class to categories and then adding these categories to below div
+ 	$(' .slider-ul li').click(function (){
+	$(".category_title").toggleClass('clicked');
+	// $(".clicked").prependTo(".icons_container");
+ 	});
 </script>
 
 </body>

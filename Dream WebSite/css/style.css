@@ -814,6 +814,9 @@ height:80px;
 .icon_wrapper{
 	position: relative;
 }
+.search_types{
+	padding-left: 30px;
+}
 .search_types ul{
 	display: flex;
     transition: all .5s linear;
@@ -867,4 +870,32 @@ height:80px;
 }
 .ul-li div {
 	width: 200px;
+}
+.menu_container{
+	display: flex;
+	flex-wrap: wrap;
+	border:1px solid #fff;
+	padding: 10px;
+}
+.category_wrap{
+	color: #fff;
+	padding: 2px 10px 2px 5px;
+	border-radius: 3px;
+	border:1px solid #bcbcbc;
+	border-image: linear-gradient(to right,#2D98D4 0%, #E81F64 100%);
+    border-image-slice: 1;
+	position: relative;
+	display: flex;
+	margin-right: 5px;
+	margin-left: 5px;
+	margin-top: 5px;
+	font-family: futura;
+	font-size: 16px;
+}
+.clear_all{
+	align-self: flex-end;
+	cursor: pointer;
+}
+.clear_all span{
+	color: #fff;	
 }

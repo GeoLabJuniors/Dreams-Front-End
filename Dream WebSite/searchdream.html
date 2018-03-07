@@ -48,95 +48,7 @@
         <input type="search" name="search" id="tag_search" autofocus>
       </div>
     </div>
-    <!--
-    <div class="wrapper hide icon_container">
-      <div class="search_by_icon">
-        <img src="./images/dream-cards/bck-m.png" class="search_icon">
-        <div class="Category_text">
-          <h5>Category1</h5>
-        </div>
-      </div>
-      <div class="search_by_icon">
-        <img src="./images/dream-cards/bck-m.png" class="search_icon">
-        <div class="Category_text">
-          <h5>Category1</h5>
-        </div>
-      </div>
-      <div class="search_by_icon">
-        <img src="./images/dream-cards/bck-m.png" class="search_icon">
-        <div class="Category_text">
-          <h5>Category1</h5>
-        </div>
-      </div>
-      <div class="search_by_icon">
-        <img src="./images/dream-cards/bck-m.png" class="search_icon">
-        <div class="Category_text">
-          <h5>Category1</h5>
-        </div>
-      </div>
-      <div class="search_by_icon">
-        <img src="./images/dream-cards/bck-m.png" class="search_icon">
-        <div class="Category_text">
-          <h5>Category1</h5>
-        </div>
-      </div>
-      <div class="search_by_icon">
-        <img src="./images/dream-cards/bck-m.png" class="search_icon">
-        <div class="Category_text">
-          <h5>Category1</h5>
-        </div>
-      </div>
-      <div class="search_by_icon">
-        <img src="./images/dream-cards/bck-m.png" class="search_icon">
-        <div class="Category_text">
-          <h5>Category1</h5>
-        </div>
-      </div>
-      <div class="search_by_icon">
-        <img src="./images/dream-cards/bck-m.png" class="search_icon">
-        <div class="Category_text">
-          <h5>Category1123456</h5>
-        </div>
-      </div>
-      <div class="search_by_icon">
-        <img src="./images/dream-cards/bck-m.png" class="search_icon">
-        <div class="Category_text">
-          <h5>Category1</h5>
-        </div>
-      </div>
-      <div class="search_by_icon">
-        <img src="./images/dream-cards/bck-m.png" class="search_icon">
-        <div class="Category_text">
-          <h5>Category1</h5>
-        </div>
-      </div>
-      <div class="search_by_icon">
-        <img src="./images/dream-cards/bck-m.png" class="search_icon">
-        <div class="Category_text">
-          <h5>Category177</h5>
-        </div>
-      </div>
-      <div class="search_by_icon">
-        <img src="./images/dream-cards/bck-m.png" class="search_icon">
-        <div class="Category_text">
-          <h5>Category177</h5>
-        </div>
-      </div>
-      <div class="search_by_icon">
-        <img src="./images/dream-cards/bck-m.png" class="search_icon">
-        <div class="Category_text">
-          <h5>Category177</h5>
-        </div>
-      </div>
-      <div class="search_by_icon">
-        <img src="./images/dream-cards/bck-m.png" class="search_icon">
-        <div class="Category_text">
-          <h5>Category177</h5>
-        </div>
-      </div>
-    </div>
--->
-    <div class="wrapper hide search_types">
+<div class="wrapper hide search_types">
     <div class="prev" onclick="onLeft();" style="opacity: 1;">
     <i class="fa fa-angle-left fa-5x arrL"></i>
     </div>
@@ -245,16 +157,7 @@
       </div>
     </div>
 </main>
-<script> 	
-    // $('#icon_search').click(function () {
-    //   $(".icon_container").addClass('show');
-    // });
-    // $(' .search_by_icon img').click(function () {
-    //   $(this).toggleClass('active');
-    //   $(".icon_container").toggleClass('show');
-    // });  
-</script>
-  <script>
+<script>
     var search_typesUL = $('.slider-ul').children().length * 104;
     $('.slider-ul').css('width', search_typesUL + 'px');
     console.log($('.slider-ul').children().length)
@@ -291,33 +194,14 @@
 $(".search_types").hide();
  $('#icon_search').click(function () {
     $(".search_types").slideToggle();
+    $('#icon_search').toggleClass('active');
     });
+
     $(' .slider-ul img').click(function () {
       $(this).toggleClass('active');
       $(".search_types").slideUp();
     });
-
-
-    /* slick
-$(document).on('ready', function() { $(".center").slick({
-        dots: false,
-        infinite: true,
-        centerMode: true,
-        slidesToShow: 10,
-        slidesToScroll: 6
-      });
-});
-$("#icon_search").click(function(){
-	$(".icon_container").slideToggle();
-	});
-$('.category_icon').click(function(){
-  $(this).toggleClass('active');
-  $(".icon_container").slideUp();
-});
-
-    */
-
-  </script>
+</script>
 
 </body>
 </html>

@@ -124,6 +124,7 @@
     </div>
   </header>
 <div class="wrapper menu_container">
+	<!--<div id="clear" class="wrapper menu_container" style="border: none;">-->
 	<div class="icons_container dis-flex-between">
 		<div class="category_wrap">category</div>
 		<div class="category_wrap">category</div>
@@ -148,9 +149,11 @@
 		<div class="category_wrap">3/7/2018</div>
 		<div class="category_wrap">3/7/2018</div>
 	</div>
+
 	<div class="clear_all">
 		<span>Clear All</span>
 	</div>
+
 </div><!--choosen categories end-->
 <main>
     <div class="wrapper-dream-body mr-b mr-t">
@@ -232,11 +235,43 @@ $(".search_types").hide();
       $(".search_types").slideUp();
     });
     //adding clicked class to categories and then adding these categories to below div
- 	$(' .slider-ul li').click(function (){
-	$(".category_title").toggleClass('clicked');
-	// $(".clicked").prependTo(".icons_container");
+ /*	$(' .slider-ul li').click(function (){
+	$(".slider-ul li h5").addClass('clicked');
+	 $(".icons_container").append(" slider-ul li h5 clicked");
  	});
+ 	*/
 </script>
+<script>//add searh categories
+$(' .slider-ul li').click(function () {
+    
+   $(".slider-ul li h5").addClass('clicked');
+ 
+    });
 
+
+
+
+document.createElement("div");
+div.setAttribute("class", "wrapper menu_container");
+
+var z=document.createElement("div");
+z.setAttribute("class", "icons_container");
+ var x=document.createElement("div");
+x.setAttribute("class", "category_wrap");
+
+
+//x.appendChild('slider-ul h5 clicked');
+//div.appendChild(x);
+z.appendChild(x);
+div.appendChild(z);
+div.append("dcec");
+
+</script>
+<script>
+	$('.clear_all').click(function () {
+     
+      $(".icons_container, .tags_container, .location_container , .date_container ").remove();
+    });
+</script>
 </body>
 </html>

@@ -243,29 +243,13 @@ $(".search_types").hide();
 </script>
 <script>//add searh categories
 $(' .slider-ul li').click(function () {
-    
-   $(".slider-ul li h5").addClass('clicked');
- 
-    });
-
-
-
-
-document.createElement("div");
-div.setAttribute("class", "wrapper menu_container");
-
-var z=document.createElement("div");
-z.setAttribute("class", "icons_container");
- var x=document.createElement("div");
-x.setAttribute("class", "category_wrap");
-
-
-//x.appendChild('slider-ul h5 clicked');
-//div.appendChild(x);
-z.appendChild(x);
-div.appendChild(z);
-div.append("dcec");
-
+  if ( $( ".category_icon" ).hasClass( "active" ) ){
+    $(this).find(".category_title").addClass('clicked');
+  }
+});
+if ( $( ".category_title" ).hasClass( "clicked" ) ){
+  $( ".icons_container" ).append('dsdsdsds');
+}
 </script>
 <script>
 	$('.clear_all').click(function () {

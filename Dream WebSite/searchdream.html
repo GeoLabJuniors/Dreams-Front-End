@@ -123,8 +123,7 @@
       </ul>
     </div>
   </header>
-<div class="wrapper menu_container">
-	<!--<div id="clear" class="wrapper menu_container" style="border: none;">-->
+<div class="wrapper hide menu_container">
 	<div class="icons_container dis-flex-between">
 		<div class="category_wrap">category</div>
 		<div class="category_wrap">category</div>
@@ -242,35 +241,19 @@ $(".search_types").hide();
  	*/
 </script>
 <script>//add searh categories
-$(' .slider-ul li').click(function () {
-    
+$(' .slider-ul li img').click(function () {
+    if($(".slider-ul li").hasClass("active")){
    $(".slider-ul li h5").addClass('clicked');
- 
+ }
+
     });
-
-
-
-
-document.createElement("div");
-div.setAttribute("class", "wrapper menu_container");
-
-var z=document.createElement("div");
-z.setAttribute("class", "icons_container");
- var x=document.createElement("div");
-x.setAttribute("class", "category_wrap");
-
-
-//x.appendChild('slider-ul h5 clicked');
-//div.appendChild(x);
-z.appendChild(x);
-div.appendChild(z);
-div.append("dcec");
-
 </script>
 <script>
 	$('.clear_all').click(function () {
+	  $(' .slider-ul img').toggleClass('active');
+      $(".menu_container").slideUp();
      
-      $(".icons_container, .tags_container, .location_container , .date_container ").remove();
+    //  $(".icons_container, .tags_container, .location_container , .date_container ").remove();
     });
 </script>
 </body>

@@ -218,12 +218,16 @@ $(".search_types").hide();
     $(".search_types").slideToggle();
     $('#icon_search').toggleClass('active');
     });
-    
+ //adding clicked category-titles to choosen categories
+    $('.slider-ul li').click(function(){
+      var child = $('.category_title').html();
+      $(".icons_container").append("<div class='category_wrap'>"+child+"</div>");
+    });
+
     $(' .slider-ul img').click(function () {
       $(this).toggleClass('active');
-     
-       $(".icons_container").append('<div class="category_wrap"></div>');
-        $(".category_wrap").append($( "h5.clicked" ));
+        //  $(".icons_container").append('<div class="category_wrap"></div>');
+        // $(".category_wrap").append($( "h5.clicked" ));
       $(".search_types").slideUp();
     });
     

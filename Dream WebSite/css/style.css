@@ -831,7 +831,7 @@ height:80px;
 	font-family: futura;
 }
 .slider-ul li {
-	padding: 0 10px;
+	padding: 0 5px;
 }
 .slider-ul {
 	list-style: none;
@@ -895,7 +895,9 @@ height:80px;
 .clear_all{
 	align-self: flex-end;
 	cursor: pointer;
+	margin-left: auto;
 }
 .clear_all span{
-	color: #fff;	
+	color: #d1d1d1;	
+	font-size: 12px;
 }

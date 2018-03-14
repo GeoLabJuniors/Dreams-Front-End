@@ -219,29 +219,27 @@ $(".search_types").hide();
     $('#icon_search').toggleClass('active');
     });
  //adding clicked category-titles to choosen categories
-    $('.slider-ul li').click(function(){
-      var child = $('.category_title').html();
-      $(".icons_container").append("<div class='category_wrap'>"+child+"</div>");
-    });
+    // $('.slider-ul li').click(function(){
+    //   var child = $('.category_title').html();
+    //   $(".icons_container").append("<div class='category_wrap'>"+child+"</div>");
+    // });
 
     $(' .slider-ul img').click(function () {
       $(this).toggleClass('active');
-        //  $(".icons_container").append('<div class="category_wrap"></div>');
-        // $(".category_wrap").append($( "h5.clicked" ));
       $(".search_types").slideUp();
-    });
-    
+    });    
 </script>
 <script>//add search categories
   $(".menu_container").hide();
 $(' .slider-ul li').click(function () {
   if ( $( ".category_icon" ).hasClass( "active" ) ){
     $(this).find(".category_title").addClass('clicked');
+      var child = $(this).find('.clicked').html();
+     $(".icons_container").append("<div class='category_wrap'>"+child+"</div>");
     $(".menu_container").slideDown();
-
   }else{
     $(".menu_container").slideUp();
-
+    $(this).find(".category_title").removeClass('clicked');
   }
 });
 </script>

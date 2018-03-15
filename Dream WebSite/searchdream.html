@@ -180,14 +180,14 @@
     </div>
 </main>
 <script>
-    var search_typesUL = $('.slider-ul').children().length * 104;
+    var search_typesUL = $('.slider-ul').children().length * 85;
     $('.slider-ul').css('width', search_typesUL + 'px');
     console.log($('.slider-ul').children().length)
 
     function onRight() {
       currentValue = parseInt($('.slider-ul').css('transform').split(',')[4]);
       
-      con = currentValue ? currentValue - 120 : -120;
+      con = currentValue ? currentValue - 120: -120;
       
       if (Math.abs(con) + 1020 < search_typesUL) {
         console.log(con)
@@ -235,20 +235,36 @@ $(' .slider-ul li').click(function () {
   if ( $( ".category_icon" ).hasClass( "active" ) ){
     $(this).find(".category_title").addClass('clicked');
       var child = $(this).find('.clicked').html();
-     $(".icons_container").append("<div class='category_wrap'>"+child+"</div>");
+     $(".icons_container").append("<div class='category_wrap'>"+child+   '<img src="./images/nav/delete-cross.png" class="deleteTag" /></div>');
+    
+
     $(".menu_container").slideDown();
   }else{
     $(".menu_container").slideUp();
     $(this).find(".category_title").removeClass('clicked');
   }
+
+
+
+   $('.deleteTag').click(function () {
+   $(".icons_container").find(".category_wrap").remove();
+     $(".menu_container").slideUp();
+      if ( $( ".category_icon" ).hasClass( "active" ) ){ 
+      $(".category_icon").removeClass('active');
+  }
+    });
 });
 </script>
 <script>
   $('.clear_all').click(function () {
    $(".menu_container").slideUp();
       $(".icons_container, .tags_container, .location_container , .date_container ").remove();
-      $(' .slider-ul li img').removeClass('active');
+      if ( $( ".category_icon" ).hasClass( "active" ) ){ 
+      $(".category_icon").removeClass('active');
+  }
     });
+
+
 </script>
 </body>
-</html>
+</html> 

@@ -209,6 +209,7 @@ cursor: pointer;
     margin-top: 10px;
     margin-bottom: 20px; 
     font-family: bnm; 
+    font-size: 14px;
 }
 
 .forgot_pass {
@@ -705,6 +706,12 @@ width: 100%;
     position: absolute;
     right: 0;
 }
+.map-close {
+    width: 5%;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5%;
+}
 .category_plus{
 	position: absolute;
     right: 0;
@@ -789,7 +796,21 @@ padding-left: 25px;
 	}
 .show{
 	display: flex;
-	}
+}
+.showmaps {
+    width: 870px;
+    height: 500px;
+    position: relative;
+    font-size: 0;
+}
+.maps {
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
 .search_by_icon img{
 	width:80px;
 height:80px;	

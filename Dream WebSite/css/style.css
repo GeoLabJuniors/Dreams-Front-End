@@ -900,10 +900,24 @@ height:80px;
 	flex-wrap: wrap;
 	border:1px solid #fff;
 	padding: 10px;
-	max-width: 1000px;
+	width: 1000px;
 	max-height:80px;
 	overflow: hidden;
+	
+	position: relative;
 }
+#middle {
+   max-width:2000px;
+    overflow:hidden;
+   
+    clear:none; 
+     position:relative; 
+    z-index:1;
+   
+}
+#l,#r{background-color: red;}
+
+
 .category_wrap{
 	color: #fff;
 	padding: 2px 10px 2px 5px;
@@ -924,6 +938,7 @@ height:80px;
 	align-self: flex-end;
 	cursor: pointer;
 	margin-left: auto;
+	height: 24px;
 }
 .clear_all span{
 	color: #d1d1d1;	
@@ -942,4 +957,27 @@ height:80px;
 .dis-flex-between-for-slider{
 justify-content: space-between;
     align-items: flex-start
+}
+
+#tag_inp{
+	width: 60%;
+	height: 35px;
+	background: transparent;
+	border-left:none;
+	border-top: none;
+	border-right: none;
+	border-bottom: 1px solid #fff;
+	outline: none;
+	color: #fff;
+	font-size: 20px;
+	font-family:bnm;
+	text-indent: 40px;
+}
+.search_t{
+	display: block;
+	position:relative;
+	/* max-width: 1052px; */
+	overflow:hidden;
+	margin-top: 20px;
+
 }

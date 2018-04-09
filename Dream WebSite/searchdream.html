@@ -36,7 +36,7 @@
     <div class="wrapper search_nav">
       <ul class="dis-flex-between">
         <li id="icon_search">icon</li>
-        <li>tags</li>
+        <li id="icon_tag">tags</li>
         <li>location</li>
         <li>date</li>
         <li>languange</li>
@@ -143,8 +143,20 @@
         </li>
               </ul>
     </div>
+
+
+<div class="search_t wrapper hide">
+       
+        <input type="search" name="search"  id="tag_inp" class="input_tag" >
+      </div>
+
+
   </header>
+ 
 <div class="wrapper hide menu_container">
+
+  <div  id="l">x</div>
+  <div id="middle">
   <div class="icons_container dis-flex-between-for-slider">
   <!--  <div class="category_wrap">category</div>-->
     
@@ -159,11 +171,13 @@
   <div class="date_container dis-flex-between-for-slider">
     <!--<div class="category_wrap">3/7/2018</div>-->
     
-  </div>
-
+  
+</div>
+</div>
   <div class="clear_all">
     <span>Clear All</span>
   </div>
+  <div id="r">x</div>
 
 </div><!--choosen categories end-->
 <main>
@@ -235,7 +249,7 @@
     }
 $(".search_types").hide();
 
-
+$(".search_t").hide();
 ///
   // $(".search_types").slideToggle();
   // $('#icon_search').toggleClass('active');
@@ -320,6 +334,41 @@ $('.clear_all').click(function () {
 });
 
 
+</script>
+<script>
+  $('#icon_tag').click(function () {
+  $(".search_t").slideToggle();
+  $('#icon_tag').toggleClass('active');
+  $(".input_tag").show().focus();
+  $('.menu_container').slideUp()
+});
+
+
+$('.input_tag').keypress(function(e) {
+    if(e.which == 13) {
+        $(".search_t").slideUp();
+    }
+});
+
+
+
+/* selected box slider
+$(document).ready(function () {
+       $("#l").click(function () { 
+       var leftPos = $('.menu_container').scrollLeft();
+       
+       $(".menu_container").animate({scrollLeft: leftPos + 250}, 600);
+     
+  });   
+
+       $("#r").click(function () { 
+       var leftPos2 = $('.menu_container').scrollLeft();
+      // console.log(leftPos2);
+       $(".menu_container").animate({scrollLeft: leftPos2 - 250}, 600);
+  });   
+       });
+
+       */
 </script>
 </body>
 </html> 

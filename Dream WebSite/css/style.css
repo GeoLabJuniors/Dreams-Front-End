@@ -842,6 +842,9 @@ height:80px;
 	display: flex;
     transition: all .5s linear;
 }
+.slider-ul li{
+	text-align: center;
+}
 .slider-ul li img {
 	width:50px;
 	height: auto;
@@ -919,7 +922,7 @@ height:80px;
 
 .category_wrap{
 	color: #fff;
-	padding: 2px 10px 2px 5px;
+	padding: 2px 20px 2px 5px;
 	border-radius: 3px;
 	border:1px solid #bcbcbc;
 	border-image: linear-gradient(to right,#2D98D4 0%, #E81F64 100%);
@@ -981,4 +984,9 @@ justify-content: space-between;
 }
 .prev, .next img{
 	cursor: pointer;
+}
+.category_wrap .deleteTag{
+	position: absolute;
+	bottom: -3px;
+	right: 3%;
 }

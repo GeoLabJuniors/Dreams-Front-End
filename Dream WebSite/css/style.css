@@ -909,13 +909,12 @@ height:80px;
 	position: relative;
 }
 #middle {
-   max-width:2000px;
-    overflow:hidden;
-   
-    clear:none; 
-     position:relative; 
-    z-index:1;
-   
+	max-width:2000px;
+	overflow:hidden;
+	transition: 1s all ease-in-out;
+	clear:none; 
+	position:relative; 
+	z-index:1;
 }
 #l,#r{background-color: red;}
 

@@ -338,30 +338,35 @@ $('.clear_all').click(function () {
 
 
 $('.input_tag').keypress(function(e) {
-    if(e.which == 13) {
+    if(e.which == 13 || e.keyCode==32) {
+
+
+
         $(".search_t").slideUp();
     }
 });
 
 
-
-/* selected box slider
 $(document).ready(function () {
-       $("#l").click(function () { 
-       var leftPos = $('.menu_container').scrollLeft();
+  $("#l").click(function () { 
+    var leftPos = $('#middle').offset().left;
+
+    newPosition = leftPos - 400;
+    newPosition = newPosition > 0 ? newPosition : 0
+
+    $('#middle').css("transform", "translateX(" + newPosition + "px)")
+    
+  });   
+
+  $("#r").click(function () { 
+    var leftPos = $('#middle').offset().left;
+    newPosition = (leftPos + 100);
+
+    $('#middle').css("transform", "translateX(" + newPosition + "px)");
+
+  });
+});
        
-       $(".menu_container").animate({scrollLeft: leftPos + 250}, 600);
-     
-  });   
-
-       $("#r").click(function () { 
-       var leftPos2 = $('.menu_container').scrollLeft();
-      // console.log(leftPos2);
-       $(".menu_container").animate({scrollLeft: leftPos2 - 250}, 600);
-  });   
-       });
-
-       */
 //adding hatstags
 function myFunction(t,e){
     if(e.keyCode==13|| e.keyCode==32){

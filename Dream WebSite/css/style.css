@@ -916,7 +916,14 @@ height:80px;
 	position:relative; 
 	z-index:1;
 }
-#l,#r{background-color: red;}
+#l{background-color: red;  float: left;}
+#r{
+	
+	float: right;
+	background-color: green;
+
+
+}
 
 
 .category_wrap{

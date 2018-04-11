@@ -925,11 +925,11 @@ height:80px;
 	position:relative; 
 	z-index:1;
 }
-#l{background-color: red;  float: left; width:30px;height: 30px;}
+#l{  float: left; width:30px;height: 30px; margin-top: 15px;}
 #r{
 	
 	
-	background-color: green;
+	margin-top: 15px;
 	width:30px;height: 30px;
 	
 

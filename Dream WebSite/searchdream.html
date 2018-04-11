@@ -45,7 +45,7 @@
         <label>
           <img src="images/icon/search.png">
         </label>
-        <input type="search" name="search" id="tag_search" onkeyup="myFunction(this,event)" autofocus>
+        <input type="search" name="search" id="tag_search" autofocus>
       </div>
     </div>
 <div class="wrapper hide search_types">
@@ -141,22 +141,15 @@
           <img src="./images/dream-cards/dream_card.png" class="category_icon">
            <h5 class="category_title">yferferferfooo</h5>
         </li>
-              </ul>
+        </ul>
     </div>
-
-
-<div class="search_t wrapper hide">
-       
-        <input type="search" name="search"  id="tag_inp" class="input_tag" >
-      </div>
-
-
-  </header>
- 
+<div class="search_t wrapper hide">      
+  <input type="search" name="search"  id="tag_inp" class="input_tag"  onkeyup="myFunction2(this,event)">
+</div>
+</header>
 <div class="wrapper hide menu_container">
-
-  <div  id="l">x</div>
-  <div id="middle">
+<!--   <div  id="l">x</div> -->
+<!--   <div id="middle"> -->
   <div class="icons_container dis-flex-between-for-slider">    
   </div>
   <div class="tags_container dis-flex-between-for-slider" id="tags_list">
@@ -166,11 +159,11 @@
   </div>
   <div class="date_container dis-flex-between-for-slider"> 
 </div>
-</div>
+<!-- </div> -->
   <div class="clear_all">
     <span>Clear All</span>
   </div>
-  <div id="r">x</div>
+<!--   <div id="r">x</div> -->
 
 </div><!--choosen categories end-->
 <main>
@@ -250,7 +243,7 @@ $(".search_t").hide();
 $('#icon_search').click(function () {
   $(".search_types").slideToggle();
   $('#icon_search').toggleClass('active');
-  $('.menu_container').slideUp()
+  $('.menu_container').slideUp();
 });
 $('.slider-ul li').click(function () {
   $(this).find('img').toggleClass('active');
@@ -336,13 +329,10 @@ $('.clear_all').click(function () {
   $('.menu_container').slideUp()
 });
 
-
+//tags button click function
 $('.input_tag').keypress(function(e) {
     if(e.which == 13 || e.keyCode==32) {
-
-
-
-        $(".search_t").slideUp();
+    $(".search_t").slideUp();
     }
 });
 
@@ -367,12 +357,12 @@ $(document).ready(function () {
   });
 });
        
-//adding hatstags
-function myFunction(t,e){
+//adding hashtags 
+function myFunction2(t,e){
     if(e.keyCode==13|| e.keyCode==32){
       if(t.value!=0){
           var x = document.createElement('div');
-          x.setAttribute('class','tag');
+          x.setAttribute('class','category_wrap');
           var z = document.createElement('div');
           z.setAttribute('class','close');
           var y = document.createElement('a');
@@ -384,8 +374,10 @@ function myFunction(t,e){
           x.appendChild(z);
           document.getElementById("tags_list").appendChild(x);
           t.value = t.defaultValue;
+          $(".menu_container").slideDown();
           $(x).click(function(){
             $(x).remove();
+            $(".menu_container").slideUp();
     });
     
   }}  

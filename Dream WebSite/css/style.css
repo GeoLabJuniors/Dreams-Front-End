@@ -989,3 +989,6 @@ justify-content: space-between;
 	bottom: -3px;
 	right: 3%;
 }
+.category_wrap a{
+	color: #fff;
+}

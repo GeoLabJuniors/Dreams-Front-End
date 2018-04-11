@@ -149,6 +149,7 @@
 </header>
 <div class="wrapper hide menu_container">
   <div  id="l">x</div>
+  <div id="mid">
  <div id="middle">
   <div class="icons_container dis-flex-between-for-slider">    
   </div>
@@ -160,11 +161,12 @@
   <div class="date_container dis-flex-between-for-slider"> 
 </div>
  </div> 
- 
-  <div id="r">x</div>
+ </div>
+  
     <div class="clear_all">
     <span>Clear All</span>
   </div>
+  <div id="r">x</div>
 </div>
 </div><!--choosen categories end-->
 <main>
@@ -280,19 +282,12 @@ $('.slider-ul li').click(function () {
     })
   }
 
-  if($('#middle').width()>700){
-$("#r").addClass("show");
-}
-
-
 $(document).ready(function(){
-  checkSize();
-
-  
+  checkSize(); 
 });
-
+// arrows
 function checkSize(){
-  if($("#middle").height()>54)  {
+  if($("#middle").height()>58)  {
     $('#r').show();
     $('#l').show();
   }
@@ -361,7 +356,7 @@ $('.input_tag').keypress(function(e) {
 
 
 $(document).ready(function () {
-  $("#l").click(function () { 
+  $("#r").click(function () { 
     var leftPos = $('#middle').offset().left;
 
     newPosition = leftPos - 400;
@@ -371,7 +366,7 @@ $(document).ready(function () {
     
   });   
 
-  $("#r").click(function () { 
+  $("#l").click(function () { 
     var leftPos = $('#middle').offset().left;
     newPosition = (leftPos + 100);
 

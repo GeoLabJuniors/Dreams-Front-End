@@ -916,11 +916,22 @@ height:80px;
 	position:relative; 
 	z-index:1;
 }
-#l{background-color: red;  float: left;}
+
+#mid {
+	max-width:850px;
+	overflow:hidden;
+	
+	clear:none; 
+	position:relative; 
+	z-index:1;
+}
+#l{background-color: red;  float: left; width:30px;height: 30px;}
 #r{
 	
-	float: right;
+	
 	background-color: green;
+	width:30px;height: 30px;
+	
 
 
 }
@@ -955,12 +966,18 @@ height:80px;
 .icons_container{
 	
 	max-height: 80px;
+	
+	
 }
 .tags_container{
 	max-height: 80px;
+	
+
 }
 .location_container{
 	max-height: 80px;
+	
+
 }
 .dis-flex-between-for-slider{
 justify-content: space-between;

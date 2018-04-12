@@ -915,6 +915,7 @@ height:80px;
 	clear:none; 
 	position:relative; 
 	z-index:1;
+	display: flex;
 }
 
 #mid {

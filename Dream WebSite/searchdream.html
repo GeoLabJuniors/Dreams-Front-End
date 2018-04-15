@@ -149,16 +149,16 @@
 </div>
 
 <div class="search_Language wrapper hide">  
-<div id="l" onclick="onLeft();" style="opacity: 1;">
+<div id="l">
     <img src="./images/dream-cards/arrow.png">
     </div>
         <div class="langBox">
  <ul id="lang">
-<li>English<li>
-  <li>ქართული<li>
+<li class="opac">English<li>
+  <li class="opac">ქართული<li>
  </ul>
 </div>
-<div id="r" onclick="onRight();" style=" opacity: 1;">
+<div id="r">
     <img src="./images/dream-cards/arrow1.png">
     </div>
 
@@ -180,6 +180,11 @@
   </div>
   <div class="date_container dis-flex-between-for-slider"> 
 </div>
+
+ <div class="language_container dis-flex-between-for-slider"> 
+</div>
+
+
  </div> 
  </div>
   
@@ -302,7 +307,7 @@ $('.slider-ul li').click(function () {
       }
     })
   }
-/*
+
 $(document).ready(function(){
   checkSize(); 
 });
@@ -317,7 +322,20 @@ function checkSize(){
     $('#l').hide();
   }
 }
-*/
+
+$(document).ready(function(){
+  checkSize2(); 
+});
+function checkSize2(){
+  if($(".langBox").height()>58)  {
+    $('#r').show();
+    $('#l').show();
+  }
+  else{
+    $('#r').hide();
+    $('#l').hide();
+  }
+}
   if (items.length) {
     $(".menu_container").slideDown()
   }
@@ -433,13 +451,52 @@ function myFunction2(t,e){
   $('#searh_lang').click(function () {
     $(".search_Language").slideToggle();
     $("#lang li").click(function (){
-   $(this).toggleClass('opac');
+   $(this).removeClass('opac');
+   $('.search_Language').slideUp();
+    $(".menu_container").slideDown();
   });
   //$('#icon_search').toggleClass('active');
-  $('.menu_container').slideUp();
+  
+window.items2 = []
+$('#lang li').click(function () {
+  const item2 = $(this).text();
+  const isAdding2 = !items2.includes(item2)
+  if (isAdding2){
+    $(this).addClass('clicked')
+    items2.push(item2)
+    $(".language_container").append(`
+      <div class='category_wrap'>
+        ${item2}
+        <img src="./images/dream-cards/x.png" class="deleteTag" />
+      </div>
+    `)
+  } else {
+    // console.log($('.category_wrap').length)
+    $('.category_wrap').each(function() {
+      // console.error(0, val)
+      // const ableToDelete = false
+       $('.deleteTag').click(function (){
 
+  
+
+
+
+          if (items2.length === 0) {
+      $('.menu_container').slideUp()
+    }
+
+       });
+    })
+  }
+})
 });
 
+
+
+  
+
+
+ 
 </script>
 </body>
 </html> 

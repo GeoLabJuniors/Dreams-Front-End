@@ -984,6 +984,11 @@ cursor: pointer;}
 	
 
 }
+.language_container{
+	max-height: 80px;
+	
+
+}
 .dis-flex-between-for-slider{
 justify-content: space-between;
     align-items: flex-start
@@ -1041,7 +1046,7 @@ justify-content: space-between;
 #lang li{
 	padding: 10px;
 	cursor: pointer;
-	opacity: 0.8;
+	
 	
 }
 .langBox{
@@ -1049,5 +1054,8 @@ width: 1052px;
 
 }
 .opac{
-	opacity: none;
+	opacity: 0.8;
+}
+.deleteTag{
+	cursor: pointer;
 }

@@ -928,9 +928,9 @@ position: absolute;
 	position:relative; 
 	z-index:1;
 }
-#l{  float: left; width:30px;height: 30px; margin-top: 15px;
+.l{  float: left; width:30px;height: 30px; margin-top: 15px;
 cursor: pointer;}
-#r{
+.r{
 	
 	
 	margin-top: 15px;

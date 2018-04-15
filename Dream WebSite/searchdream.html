@@ -149,7 +149,7 @@
 </div>
 
 <div class="search_Language wrapper hide">  
-<div id="l">
+<div class="l">
     <img src="./images/dream-cards/arrow.png">
     </div>
         <div class="langBox">
@@ -158,7 +158,7 @@
   <li class="opac">ქართული<li>
  </ul>
 </div>
-<div id="r">
+<div class="r">
     <img src="./images/dream-cards/arrow1.png">
     </div>
 
@@ -166,7 +166,7 @@
 
 </header>
 <div class="wrapper hide menu_container">
-  <div  id="l">
+  <div  class="l">
     <img src="./images/dream-cards/arrow.png">
   </div>
   <div id="mid">
@@ -191,7 +191,7 @@
     <div class="clear_all">
     <span>Clear All</span>
   </div>
-  <div id="r">
+  <div class="r">
     <img src="./images/dream-cards/arrow1.png">
   </div>
 </div>
@@ -310,32 +310,22 @@ $('.slider-ul li').click(function () {
 
 $(document).ready(function(){
   checkSize(); 
+  
 });
 //arrows
 function checkSize(){
   if($("#middle").height()>58)  {
-    $('#r').show();
-    $('#l').show();
+    $('.r').show();
+    $('.l').show();
   }
   else{
-    $('#r').hide();
-    $('#l').hide();
+    $('.r').hide();
+    $('.l').hide();
   }
 }
 
-$(document).ready(function(){
-  checkSize2(); 
-});
-function checkSize2(){
-  if($(".langBox").height()>58)  {
-    $('#r').show();
-    $('#l').show();
-  }
-  else{
-    $('#r').hide();
-    $('#l').hide();
-  }
-}
+
+
   if (items.length) {
     $(".menu_container").slideDown()
   }

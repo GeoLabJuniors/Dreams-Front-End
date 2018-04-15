@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="js/app.js"></script>
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 </head>
 
 <body>
@@ -171,7 +173,7 @@
   </div>
   <div id="mid">
  <div id="middle">
-  <div class="icons_container dis-flex-between-for-slider">    
+  <div class="icons_container dis-flex-between-for-slider" id="main">    
   </div>
   <div class="tags_container dis-flex-between-for-slider" id="tags_list">
   </div>
@@ -181,7 +183,7 @@
   <div class="date_container dis-flex-between-for-slider"> 
 </div>
 
- <div class="language_container dis-flex-between-for-slider"> 
+ <div class="language_container dis-flex-between-for-slider" id="main"> 
 </div>
 
 
@@ -416,7 +418,7 @@ function myFunction2(t,e){
       if(t.value!=0){
           var x = document.createElement('div');
           x.setAttribute('class','category_wrap');
-          var z = document.createElement('div');
+         var z = document.createElement('div');
           z.setAttribute('class','close');
           var y = document.createElement('a');
           z.innerHTML="x";
@@ -481,9 +483,32 @@ $('#lang li').click(function () {
 })
 });
 
-
+</script>
 
   
+
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+<script type="text/javascript" src="slick/slick.js"></script>
+ <script type="text/javascript">
+  $(document).ready(function () {
+    $('#main').slick({
+        slidesToShow: 3,
+        rows: 2,
+        // onBeforeChange switches both at the same time
+        // but current is set before the animation
+        // so the secondary row goes backwards
+        onAfterChange: function (slider) {
+            current = $('#main').slickCurrentSlide();
+            $('#secondary').slickGoTo(current);
+        }
+    });
+
+    $('#secondary').slick({
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        draggable: false,
+    });
+});
 
 
  

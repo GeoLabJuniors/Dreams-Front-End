@@ -579,7 +579,7 @@ width: 100%;
 }
 .search_nav{
 	margin-top: 50px;
-	padding-left: 25px;
+	
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -865,7 +865,7 @@ height:80px;
 }
 .next {
     text-align: center;
-	position: absolute;
+position: absolute;
 	right: 0;
 	bottom: 40px;
 /*    float: right;*/
@@ -882,6 +882,8 @@ height:80px;
     cursor: pointer;
     transition: all .2s linear;
 }
+
+
 .prev{  
     position: absolute;
 	bottom: 40px;
@@ -1018,4 +1020,34 @@ justify-content: space-between;
 }
 .category_wrap a{
 	color: #fff;
+}
+
+.search_Language{
+	display: flex;
+	position:relative;
+	/* max-width: 1052px; */
+	overflow:hidden;
+	margin-top: 20px;
+}
+
+#lang{
+
+	color: #fff;
+	text-align: center;
+	font-family: futura;
+	display: flex;
+	
+}
+#lang li{
+	padding: 10px;
+	cursor: pointer;
+	opacity: 0.8;
+	
+}
+.langBox{
+width: 1052px;
+
+}
+.opac{
+	opacity: none;
 }

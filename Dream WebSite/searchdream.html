@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <title>სიზმრების საიტი</title>
   <meta charset="utf-8">
@@ -8,11 +7,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="js/app.js"></script>
-  <script src="js/.js"></script>
-  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+ <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
   <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 </head>
-
 <body>
   <header>
     <div class="wrapper dis-flex-between">
@@ -164,7 +161,6 @@
 <div class="r">
     <img src="./images/dream-cards/arrow1.png">
     </div>
-
 </div>
 
 </header>
@@ -174,24 +170,19 @@
   </div>
   <div id="mid">
  <div id="middle">
-  <div class="icons_container dis-flex-between-for-slider" id="main">    
+  <div class="icons_container dis-flex-between-for-slider">    
   </div>
   <div class="tags_container dis-flex-between-for-slider" id="tags_list">
   </div>
   <div class="location_container dis-flex-between-for-slider">
-    
   </div>
   <div class="date_container dis-flex-between-for-slider"> 
 </div>
-
- <div class="language_container dis-flex-between-for-slider" id="main"> 
+<div class="language_container dis-flex-between-for-slider"> 
 </div>
-
-
- </div> 
+</div> 
  </div>
-  
-    <div class="clear_all">
+  <div class="clear_all">
     <span>Clear All</span>
   </div>
   <div class="r">
@@ -327,15 +318,10 @@ function checkSize(){
   }
 }
 
-
-
-  if (items.length) {
+ if (items.length) {
     $(".menu_container").slideDown()
   }
-
-
-
-  $('.deleteTag').click(function () {
+ $('.deleteTag').click(function () {
     const item = $(this).parent().text().replace(/\n| /g, '')
     if (items.includes(item)) {
       const itemIndex = items.indexOf(item)
@@ -386,9 +372,9 @@ $('.input_tag').keypress(function(e) {
     }
 });
 
-/*selected box slider
+//selected box slider
 $(document).ready(function () {
-  $("#r").click(function () { 
+  $(".r").click(function () { 
    // var leftPos = $('#middle').offset().right;
     //console.log(leftPos);
 
@@ -402,7 +388,7 @@ $(document).ready(function () {
     
   });   
 
-  $("#l").click(function () { 
+  $(".l").click(function () { 
     var leftPos = $('#middle').offset().left;
     newPosition = (leftPos + 100);
     newPosition = newPosition < 0 ? newPosition : 0
@@ -412,11 +398,11 @@ $(document).ready(function () {
 
   
 });
- */      
+      
 //adding hashtags 
 function myFunction2(t,e){
     if(e.keyCode==13|| e.keyCode==32){
-      if(t.value!=0){
+      if(t.value!=0 && t.value.trim()!=""){
           var x = document.createElement('div');
           x.setAttribute('class','category_wrap');
          var z = document.createElement('div');
@@ -431,7 +417,7 @@ function myFunction2(t,e){
           document.getElementById("tags_list").appendChild(x);
           t.value = t.defaultValue;
           $(".menu_container").slideDown();
-          $(x).click(function(){
+          $(z).click(function(){
             $(x).remove();
             $(".menu_container").slideUp();
     });
@@ -439,14 +425,19 @@ function myFunction2(t,e){
   }}  
 };
 
+
 // search by language
 
   $('#searh_lang').click(function () {
     $(".search_Language").slideToggle();
+    $('#searh_lang').toggleClass('active');
+     $('.menu_container').slideUp();
+   });
     $("#lang li").click(function (){
-   $(this).removeClass('opac');
+   $(this).toggleClass('opac');
+
    $('.search_Language').slideUp();
-    $(".menu_container").slideDown();
+      $(".menu_container").slideDown();
   });
   //$('#icon_search').toggleClass('active');
   
@@ -488,10 +479,7 @@ $('#lang li').click(function () {
           $(this).addClass('opac')
         }
       })
-
-
-
-          if (items2.length === 0) {
+  if (items2.length === 0) {
       $('.menu_container').slideUp()
     }
 
@@ -499,37 +487,9 @@ $('#lang li').click(function () {
     }
   })
 })
-});
+;
 
 </script>
 
-  
-
-  <script type="text/javascript" src="slick/slick.min.js"></script>
-<script type="text/javascript" src="slick/slick.js"></script>
- <script type="text/javascript">
-  $(document).ready(function () {
-    $('#main').slick({
-        slidesToShow: 3,
-        rows: 2,
-        // onBeforeChange switches both at the same time
-        // but current is set before the animation
-        // so the secondary row goes backwards
-        onAfterChange: function (slider) {
-            current = $('#main').slickCurrentSlide();
-            $('#secondary').slickGoTo(current);
-        }
-    });
-
-    $('#secondary').slick({
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        draggable: false,
-    });
-});
-
-
- 
-</script>
 </body>
 </html> 

@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/.js"></script>
   <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
   <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 </head>
@@ -463,13 +464,30 @@ $('#lang li').click(function () {
       </div>
     `)
   } else {
-    // console.log($('.category_wrap').length)
-    $('.category_wrap').each(function() {
+     $('.category_wrap').each(function() {
       // console.error(0, val)
       // const ableToDelete = false
+      const ableToDelete = $(this).text().replace(/\n| /g, '') === item2
+      if (ableToDelete) {
+        const itemIndex = items2.indexOf(item2)
+        items2.splice(itemIndex, 1)
+        $(this).remove()
+      }
+    })
+  }
        $('.deleteTag').click(function (){
 
-  
+   const item2 = $(this).parent().text().replace(/\n| /g, '')
+    if (items2.includes(item2)) {
+      const itemIndex = items2.indexOf(item2)
+      items2.splice(itemIndex, 1)
+      $(this).closest('.category_wrap').remove()
+      $('#lang li').each(function() {
+        const isActive = $(this).text().replace(/\n| /g, '') === item2
+        if (isActive) {
+          $(this).addClass('opac')
+        }
+      })
 
 
 
@@ -477,9 +495,9 @@ $('#lang li').click(function () {
       $('.menu_container').slideUp()
     }
 
-       });
-    })
-  }
+       
+    }
+  })
 })
 });
 

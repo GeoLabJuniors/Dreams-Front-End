@@ -928,13 +928,14 @@ position: absolute;
 	position:relative; 
 	z-index:1;
 }
-.l{  float: left; width:30px;height: 30px; margin-top: 15px;
-cursor: pointer;}
-.r{
-	
-	
-	margin-top: 15px;
-	width:30px;height: 30px;
+.l{  
+	float: left; width:30px;height: 30px; margin-top: 15px;
+cursor: pointer;
+}
+.r{	
+	position: absolute;
+	right: 8%;
+	top: 30%;
 	cursor:pointer;
 	
 
@@ -959,10 +960,10 @@ cursor: pointer;}
 
 }
 .clear_all{
-	align-self: flex-end;
 	cursor: pointer;
-	margin-left: auto;
-	height: 24px;
+	position: absolute;
+	bottom: 0;
+	right: 8%;
 }
 .clear_all span{
 	color: #d1d1d1;	

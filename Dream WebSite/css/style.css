@@ -929,8 +929,12 @@ position: absolute;
 	z-index:1;
 }
 .l{  
-	float: left; width:30px;height: 30px; margin-top: 15px;
+	float: left;
+	 width:30px;
+	 height: 30px; 
+	 margin-top: 15px;
 cursor: pointer;
+
 }
 .r{	
 	position: absolute;
@@ -1048,7 +1052,8 @@ justify-content: space-between;
 	
 }
 .langBox{
-width: 1052px;
+
+
 
 }
 .opac{

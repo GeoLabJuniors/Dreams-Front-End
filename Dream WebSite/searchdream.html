@@ -149,18 +149,22 @@
 </div>
 
 <div class="search_Language wrapper hide">  
-<!-- <div class="l">
-    <img src="./images/dream-cards/arrow.png">
-    </div> -->
+ 
         <div class="langBox">
+          <div class="l">
+    <img src="./images/dream-cards/arrow.png">
+    </div>
  <ul id="lang">
 <li class="opac">English<li>
   <li class="opac">ქართული<li>
+ 
+
  </ul>
-</div>
-<!-- <div class="r">
+  <div class="r">
     <img src="./images/dream-cards/arrow1.png">
-    </div> -->
+    </div>
+</div>
+
 </div>
 
 </header>
@@ -304,8 +308,12 @@ $('.slider-ul li').click(function () {
 
 $(document).ready(function(){
   checkSize(); 
+    check(); 
   
 });
+
+
+
 //arrows
 function checkSize(){
   if($("#middle").height()>58)  {
@@ -317,6 +325,18 @@ function checkSize(){
     $('.l').hide();
   }
 }
+
+
+function check(){
+ 
+ if($(".langBox").width()<900)  {
+    $('.r').css('display', 'none');
+    $('.l').css('display', 'none');
+  }
+
+
+}
+
 
  if (items.length) {
     $(".menu_container").slideDown()
@@ -356,14 +376,18 @@ $('.clear_all').click(function () {
 });
 
 
+
+
 </script>
 <script>
   $('#icon_tag').click(function () {
+    $('#icon_search').toggleClass('active');
   $(".search_t").slideToggle();
   $('#icon_tag').toggleClass('active');
   $(".input_tag").show().focus();
   $('.menu_container').slideUp()
 });
+
 
 //tags button click function
 $('.input_tag').keypress(function(e) {
@@ -408,7 +432,8 @@ function myFunction2(t,e){
          var z = document.createElement('div');
           z.setAttribute('class','close');
           var y = document.createElement('a');
-          z.innerHTML="x";
+          z.innerHTML= '<img src="./images/dream-cards/x.png" />';
+          z.setAttribute('class','deleteTag');
           y.setAttribute('href',"#");
           y.setAttribute('id',"link_tag");
           y.innerHTML = "#"+t.value.trim();
@@ -429,6 +454,7 @@ function myFunction2(t,e){
 // search by language
 
   $('#searh_lang').click(function () {
+    $('#icon_search').toggleClass('active');
     $(".search_Language").slideToggle();
     $('#searh_lang').toggleClass('active');
      $('.menu_container').slideUp();
@@ -439,8 +465,8 @@ function myFunction2(t,e){
    $('.search_Language').slideUp();
       $(".menu_container").slideDown();
   });
-  //$('#icon_search').toggleClass('active');
-  
+  $('#icon_search').toggleClass('active');
+
 window.items2 = []
 $('#lang li').click(function () {
   const item2 = $(this).text();
@@ -488,6 +514,14 @@ $('#lang li').click(function () {
   })
 })
 ;
+$('.clear_all').click(function () {
+ $('.langBox ul li').each(function() {
+    $(this).addClass('opac')
+  })
+  $('.category_wrap').remove()
+  $(".menu_container").slideUp();
+});
+
 
 </script>
 

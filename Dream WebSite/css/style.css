@@ -826,7 +826,7 @@ height:80px;
 	position:relative;
 	/* max-width: 1052px; */
 	overflow:hidden;
-	margin-top: 20px;
+	margin-top: 40px;
 }
 .search_by_icon{
 	width:120px;
@@ -928,13 +928,12 @@ position: absolute;
 	position:relative; 
 	z-index:1;
 }
-.l{  
+.l{
 	float: left;
-	 width:30px;
-	height: 30px; 
-	 margin-top: 30px;
-cursor: pointer;
-
+	width:30px;
+	height: 30px;
+	/* margin-top: 30px; */
+	cursor: pointer;
 }
 .r{	
 	position: absolute;
@@ -1023,14 +1022,14 @@ justify-content: space-between;
 	font-family:bnm;
 	text-indent: 40px;
 	margin-left: 20%;
-	margin-top: 80px;
+	margin-top: 60px;
 }
 .search_t{
 	display: block;
 	position:relative;
 	/* max-width: 1052px; */
 	overflow:hidden;
-	margin-top: 20px;
+	/* margin-top: -7px; */
 }
  .next img{
 	cursor: pointer;
@@ -1045,8 +1044,8 @@ cursor: pointer;
 
 .category_wrap .deleteTag{
 	position: absolute;
-	bottom: 6px;
-	right: 3%;
+	bottom: 4px;
+	right: 3px;
 }
 .category_wrap a{
 	color: #fff;
@@ -1061,12 +1060,10 @@ cursor: pointer;
 }
 
 #lang{
-
-	color: #fff;
-	text-align: center;
-	font-family: futura;
-	display: flex;
-	
+color: #fff;
+text-align: center;
+font-family: bnm;
+display: flex;
 }
 #lang li{
 	padding: 10px;
@@ -1074,25 +1071,19 @@ cursor: pointer;
 	
 	
 }
-.langBox{
-
-
-
-}
+.langBox{font-family: bnm;margin-top: 20px;}
 .opac{
 	opacity: 0.8;
 }
 .deleteTag{
 	cursor: pointer;
-	width:3.571px;
-	height: 8.385px;
+	width: 8px;
+	height: 12px;
 }
 .deleteTag img{
-	
-	width:3.571px;
-	height: 8.385px;
-	
-	position: absolute;
-
-	right: 3%;
+	/* width:3.571px; */
+	/* height: 8.385px; */
+	position: absolute;
+	right: 3px;
+	bottom:  4px;
 }

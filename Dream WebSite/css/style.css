@@ -2,15 +2,23 @@
 	font-family:bnm;
 	src:url(../fonts/bpg_nino_mtavruli_normal.ttf);
 }
+
 @font-face{
 	font-family:myFont;
 	src:url(../fonts/gadugi.ttf);
 }
+
 @font-face{
 	font-family: futura;
 	src:url(../fonts/futura.ttf);
 }
-*{
+@font-face{
+	font-family: helvetica-regular;
+	src:url(../fonts/bpg_nino_mtavruli_normal.ttf);
+}
+
+* {
+	outline: none;
 	margin:0;
 	padding:0;
 	list-style-type:none;
@@ -20,6 +28,18 @@
 button{
 	outline:none;
 	border:none;
+}
+body::-webkit-scrollbar {
+    width: 1px;
+}
+ 
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: transparent;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background:transparent;
+  outline: 1px solid transparent;
 }
 body{
 	background:black;	
@@ -31,10 +51,16 @@ header{
 	width:100%;
 	padding:40px 100px 40px 100px;
 }
+#lang_i .wrapper {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
 .wrapper{
 	margin:0 auto;
 	max-width:1052px;
 	width:100%;
+	overflow:  hidden;
 }
 .dis-flex-between{
 	display:flex;
@@ -638,7 +664,8 @@ width: 100%;
 	color: #fff;
 	font-size: 25px;
 	position: absolute;
-	left: 5px;
+	left: 0;
+	cursor:  pointer;
 }
 .search_dream{
 	border:solid;
@@ -696,7 +723,7 @@ width: 100%;
 }
 #category_tags{
 	padding-top: 10px;
-	//display:none;
+	display:none;
 }
 
 .hide{
@@ -825,7 +852,6 @@ height:80px;
 	display: block;
 	position:relative;
 	/* max-width: 1052px; */
-	overflow:hidden;
 	margin-top: 40px;
 }
 .search_by_icon{
@@ -836,7 +862,6 @@ height:80px;
 	position: relative;
 }
 .search_types{
-	padding-left: 30px;
 }
 .search_types ul{
 	display: flex;
@@ -844,9 +869,10 @@ height:80px;
 }
 .slider-ul li{
 	text-align: center;
+	margin: 0 5px;
 }
 .slider-ul li img {
-	width:50px;
+	width: 50px;
 	height: auto;
 }
 .slider-ul li h5{
@@ -854,22 +880,22 @@ height:80px;
 	text-align: center;
 	font-family: futura;
 	word-wrap: break-word;
-
+	width:  max-content;
 }
 .slider-ul li {
-	padding: 0 5px;
-	width:80px;
+	width: auto;
 }
 .slider-ul {
 	list-style: none;
 }
 .next {
     text-align: center;
-position: absolute;
-	right: 0;
-	bottom: 40px;
-/*    float: right;*/
+    position: absolute;
+    right: 0;
+    /*    float: right;*/
     z-index: 9;
+    transform: translate(100%,-50%);
+    top: 50%;
 }
 .arrR{
     color: rgba(0,0,0,.2);
@@ -884,11 +910,12 @@ position: absolute;
 }
 
 
-.prev{  
+.prev{
     position: absolute;
-	bottom: 40px;
-	left:10px;
-	z-index: 155675;
+    left: 0;
+    z-index: 155675;
+    transform: translate(-100%,-50%);
+    top: 50%;
 }
 .prev i,
 .next i {
@@ -914,8 +941,8 @@ position: absolute;
 	max-width:2000px;
 	overflow:hidden;
 	transition: 1s all ease-in-out;
-	clear:none; 
-	position:relative; 
+	clear:none;
+	position:relative;
 	z-index:1;
 	display: flex;
 }
@@ -929,19 +956,18 @@ position: absolute;
 	z-index:1;
 }
 .l{
-	float: left;
-	width:30px;
-	height: 30px;
-	/* margin-top: 30px; */
-	cursor: pointer;
-}
-.r{	
 	position: absolute;
-	right: 10px;
-	top: 30%;
+	cursor: pointer;
+	top: 50%;
+	left: 0;
+	transform: translate(-100%, -50%);
+}
+.r{
+	position: absolute;
+	right: 0;
+	top: 50%;
 	cursor:pointer;
-	 margin-top: 15px;
-	
+	transform: translate(100%, -50%);
 }
 .r img{
 width:15px;
@@ -961,52 +987,33 @@ width:15px;
 	border-radius: 3px;
 	border:1px solid #bcbcbc;
 	border-image: linear-gradient(to right,#2D98D4 0%, #E81F64 100%);
-    border-image-slice: 1;
+	border-image-slice: 1;
 	position: relative;
 	display: inline-block;
-	
 	font-family: futura;
 	font-size: 12px;
 	margin: 9px 7px;
-		
-	
-
+	width:  max-content;
 }
 .clear_all{
 	cursor: pointer;
 	position: absolute;
-    bottom: 2px;
-    right: 4px;
+	bottom: 3px;
+	right: 2px;
 }
 .clear_all span{
-	color: #d1d1d1;	
+	color: #d1d1d1;
 	font-size: 12px;
+	border-image: linear-gradient(to right,#2D98D4 0%, #E81F64 100%);
+	border-image-slice: 1;
+	border-width: 1px;
+	border-style:  solid;
+	padding: 5px 4px 2px 5px;
+	text-transform:  uppercase;
+	font-family: helvetica-regular;
 }
-.icons_container{
-	
-	max-height: 80px;
-	
-	
-}
-.tags_container{
-	max-height: 80px;
-	
 
-}
-.location_container{
-	max-height: 80px;
-	
-
-}
-.language_container{
-	max-height: 80px;
-	
-
-}
-.dis-flex-between-for-slider{
-justify-content: space-between;
-    align-items: flex-start
-}
+.dis-flex-between-for-slider{justify-content: space-between;align-items: flex-start;/* display: flex; */}
 
 #tag_inp{
 	width: 60%;
@@ -1054,22 +1061,23 @@ cursor: pointer;
 .search_Language{
 	display: flex;
 	position:relative;
-	/* max-width: 1052px; */
-	overflow:hidden;
 	margin-top: 20px;
+	height: 66px;
 }
-
 #lang{
-color: #fff;
-text-align: center;
-font-family: bnm;
-display: flex;
+
+color: #fff;
+
+text-align: center;
+
+font-family: bnm;
+
+display: flex;
 }
 #lang li{
-	padding: 10px;
+	padding: 0 10px;
 	cursor: pointer;
-	
-	
+	margin:  0;
 }
 .langBox{font-family: bnm;margin-top: 20px;}
 .opac{
@@ -1081,9 +1089,182 @@ cursor: pointer;
 	height: 12px;
 }
 .deleteTag img{
-	/* width:3.571px; */
-	/* height: 8.385px; */
-	position: absolute;
-	right: 3px;
-	bottom:  4px;
+	
+/* width:3.571px; */
+	
+/* height: 8.385px; */
+	
+position: absolute;
+	
+right: 3px;
+	
+bottom:  4px;
+}
+
+/*================= calendar ================*/
+
+
+.ui-datepicker-calendar thead:after {
+	height:2px;
+	width:100%;
+	background:red;
+
+}
+.calendar {
+  position: absolute;
+  width: 280px;
+  left: 50%;
+  top: 50%;
+  margin: -145px 0px 0px -140px;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.ui-datepicker-header {
+  height: 50px;
+  line-height: 50px;
+  color: #b0aead;
+  background: transparent;
+  margin-bottom: 10px;
+  position:  relative;
+}
+.ui-datepicker-prev,
+.ui-datepicker-next {
+  width: 20px;
+  height: 100%;
+  text-indent: 9999px;
+  cursor: pointer;
+  overflow: hidden;
+  position:  absolute;
+  top: 50%;
+  background-position: center !important;
+}
+.ui-datepicker-prev {
+  background: url(../images/dream-cards/arrow.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  left: 0;
+  transform: translateY(-50%);
+}
+.ui-datepicker-prev:after {
+}
+.ui-datepicker-next {
+  right:  0;
+  background: url(../images/dream-cards/arrow.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  transform: rotate(180deg) translateY(50%);
+}
+.ui-datepicker-next:after {
+  transform: rotate(-135deg);
+  margin: -43px 0px 0px 6px;
+}
+
+.ui-datepicker-prev:hover,
+.ui-datepicker-next:hover,
+.ui-datepicker-prev:hover:after,
+.ui-datepicker-next:hover:after {
+  border-color: #5ed1cc;
+}
+.ui-datepicker-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-family: 'helvetica-regular';
+  color: #bcbcbc;
+}
+.ui-datepicker-calendar {
+  width: 100%;
+  text-align: center;
+}
+.ui-datepicker-calendar thead tr th span {
+  display: block;
+  width: auto;
+  color: #969696;
+  margin-bottom: 5px;
+  font-size: 13px;
+  text-align:  center;
+}
+.ui-state-default {
+  display: block;
+  text-decoration: none;
+  color: #737373;
+  line-height: 40px;
+  font-size: 12px;
+}
+.ui-state-default:hover {
+  background: rgba(0,0,0,0.02);
+}
+.ui-state-highlight{
+  color: #8dd391;
+}
+.ui-state-active {
+  /* color: #5ed1cc; */
+}
+.ui-datepicker-unselectable .ui-state-default {
+  color: #eee;
+  border: 2px solid transparent;
+}
+
+.ui-datepicker-year {
+    display:  none;
+}
+
+#datepicker {
+    width: 40%;
+    display: inline-block;
+}
+
+
+#datepicker2 {
+    width: 40%;
+    display: inline-block;
+}
+.times {
+    height: auto;
+    background:  #fff;
+    width: 100%;
+}
+.times h1 {
+    width: 592px;
+    display:  inline-block;
+    text-align: center;
+}
+.search_date {
+    display:  flex;
+    justify-content: space-between;
+}
+#date_i {
+    margin-top: 80px;
+    max-width: 1052px !important;
+    margin-left:  auto;
+    margin-right:  auto;
+}
+.date_container {
+    display:  flex;
+}
+.search_box label img {
+    background: #000000;
+}
+.ui-datepicker-week-end a {
+    color: #fff;
+}
+
+.ui-datepicker-week-end span {
+    color: #d1d1d1 !important;
+}
+.ui-datepicker-calendar thead tr th:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background:#fff;
+    border-left:solid 1px #fff;
+    box-sizing:content-box;
+    white-space: inherit !important;
+    border-spacing: 0 !important;
+    border-left: solid 2px #fff;
+    }
 }

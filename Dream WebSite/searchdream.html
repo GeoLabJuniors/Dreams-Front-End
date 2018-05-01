@@ -5,9 +5,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="js/app.js"></script>
- <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
   <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 </head>
 <body>
@@ -38,166 +36,83 @@
         <li id="icon_search">icon</li>
         <li id="icon_tag">tags</li>
         <li>location</li>
-        <li>date</li>
+        <li id="date">date</li>
         <li id="searh_lang">languange</li>
       </ul>
       <div class="search_box">
         <label>
           <img src="images/icon/search.png">
         </label>
-        <input type="search" name="search" id="tag_search" autofocus>
+        <input type="search" name="search" id="tag_search" autofocus >
       </div>
     </div>
-<div class="wrapper hide search_types">
-    <div class="prev" onclick="onLeft();" style="opacity: 1;">
-    <img src="./images/dream-cards/arrow.png">
-    </div>
-    
-      <ul class="slider-ul">
-        <li>
-          <img src="./images/dream-cards/dream_card.png" class="category_icon">
-           <h5 class="category_title">Category1</h5>
-        </li>
-        <li>
-          <img src="./images/dream-cards/dream_card.png" class="category_icon">
-           <h5 class="category_title">Category2</h5>
-        </li>
-        <li>
-          <img src="./images/dream-cards/dream_card.png" class="category_icon">
-           <h5 class="category_title">Category3</h5>
-        </li>
-        <li>
-          <img src="./images/dream-cards/dream_card.png" class="category_icon">
-           <h5 class="category_title">Category4</h5>
-        </li>
-        <li>
-          <img src="./images/dream-cards/dream_card.png" class="category_icon">
-           <h5 class="category_title">Category5</h5>
-        </li>
-        <li>
-          <img src="./images/dream-cards/dream_card.png" class="category_icon">
-           <h5 class="category_title">Category6</h5>
-        </li>
-        <li>
-          <img src="./images/dream-cards/dream_card.png" class="category_icon">
-           <h5 class="category_title">Category7</h5>
-        </li>
-        <li>
-          <img src="./images/dream-cards/dream_card.png" class="category_icon">
-           <h5 class="category_title">Category8</h5>
-        </li>
-        <li>
-          <img src="./images/dream-cards/dream_card.png" class="category_icon">
-           <h5 class="category_title">Category4447</h5>
-        </li>
-        <li>
-          <img src="./images/dream-cards/dream_card.png" class="category_icon">
-           <h5 class="category_title">Categowqdqdwdwedry17frgrg7</h5>
-        </li>
-        <li>
-          <img src="./images/dream-cards/dream_card.png" class="category_icon">
-           <h5 class="category_title">ewfwfwe</h5>
-        </li>
-        <li>
-          <img src="./images/dream-cards/dream_card.png" class="category_icon">
-           <h5 class="category_title">ewfwfewfwfw</h5>
-        </li>
-        <li>
-          <img src="./images/dream-cards/dream_card.png" class="category_icon">
-           <h5 class="category_title">wefefe</h5>
-        </li>
-        <li>
-          <img src="./images/dream-cards/dream_card.png" class="category_icon">
-           <h5 class="category_title">Caterfernfneregory</h5>
-        </li>
-        <li>
-          <img src="./images/dream-cards/dream_card.png" class="category_icon">
-           <h5 class="category_title">erferfe</h5>
-        </li>
-        <li>
-          <img src="./images/dream-cards/dream_card.png" class="category_icon">
-           <h5 class="category_title">ermfermfermf</h5>
-        </li>
+    <div class="hide search_types"  id="icon" style="display: none;">
+      <div class="prev" style="opacity: 1;"  onclick="onLeft()">
+        <img src="./images/dream-cards/arrow.png">
+      </div>
 
- <li>
-          <img src="./images/dream-cards/dream_card.png" class="category_icon">
-           <h5 class="category_title">ok</h5>
-        </li>
-         <li>
-          <img src="./images/dream-cards/dream_card.png" class="category_icon">
-           <h5 class="category_title">pefrerfk</h5>
-        </li>
-         <li>
-          <img src="./images/dream-cards/dream_card.png" class="category_icon">
-           <h5 class="category_title">erfefef</h5>
-        </li>
-         <li>
-          <img src="./images/dream-cards/dream_card.png" class="category_icon">
-           <h5 class="category_title">helloooooo</h5>
-        </li>
- <li>
-          <img src="./images/dream-cards/dream_card.png" class="category_icon">
-           <h5 class="category_title">yferferferfooo</h5>
-        </li>
+      <div class="wrapper ">
+        <ul class="slider-ul" id="once">
+        
         </ul>
-        <div class="next" onclick="onRight();" style=" opacity: 1;">
-    <img src="./images/dream-cards/arrow1.png">
-    </div>
-    </div>
-<div class="search_t wrapper hide">      
-  <input type="search" name="search"  id="tag_inp" class="input_tag"  onkeyup="myFunction2(this,event)">
-</div>
+      </div>
 
-<div class="search_Language wrapper hide">  
- 
-        <div class="langBox">
-          <div class="l">
-    <img src="./images/dream-cards/arrow.png">
+      <div class="next" style=" opacity: 1;"  onclick="onRight()">
+        <img src="./images/dream-cards/arrow1.png">
+      </div>
     </div>
- <ul id="lang">
-<li class="opac">English<li>
-  <li class="opac">ქართული<li>
- 
-
- </ul>
-  <div class="r">
-    <img src="./images/dream-cards/arrow1.png">
+    <div class="search_t wrapper hide" id="tag" style="display: none;">      
+      <input type="search" name="search"  id="tag_inp" class="input_tag"  >
     </div>
-</div>
 
-</div>
+    <div class="search_Language  hide" id="lang_i" style="display: none;">   
+      <div class="l" onclick="onLeft2()">
+        <img src="./images/dream-cards/arrow.png">
+      </div>
 
-</header>
-<div class="wrapper hide menu_container">
-  <div  class="l">
-    <img src="./images/dream-cards/arrow.png">
+      <div class="wrapper ">    
+        <ul class="slider-ul sul" id="lang">
+
+        </ul>
+      </div>
+
+      <div class="r" onclick="onRight2()">
+        <img src="./images/dream-cards/arrow1.png">
+      </div>
+
+    </div>
+    <div class="search_date hide" id="date_i" style="display: none;">
+      
+      <div id="datepicker"></div>
+      <div id="datepicker2"></div>
+    
+    </div>
+
+
+  </header>
+  <div class="wrapper hide menu_container" style="display: none;">
+    <div id="mid">
+      <div id="middle">
+        <div class="icons_container dis-flex-between-for-slider"></div>
+        <div class="tags_container dis-flex-between-for-slider" id="tags_list"></div>
+        <div class="location_container dis-flex-between-for-slider"></div>
+        <div class="date_container dis-flex-between-for-slider">
+            <div id="d_start"></div>
+            <div id="d_end"></div>
+        </div>
+        <div class="language_container dis-flex-between-for-slider"></div>
+        <div class="search_container dis-flex-between-for-slider"></div>
+      </div> 
+    </div>
+    <div class="clear_all">
+      <span id="clear_all">Clear All</span>
+      <span id="submit">search</span>
+    </div>
   </div>
-  <div id="mid">
- <div id="middle">
-  <div class="icons_container dis-flex-between-for-slider">    
-  </div>
-  <div class="tags_container dis-flex-between-for-slider" id="tags_list">
-  </div>
-  <div class="location_container dis-flex-between-for-slider">
-  </div>
-  <div class="date_container dis-flex-between-for-slider"> 
-</div>
-<div class="language_container dis-flex-between-for-slider"> 
-</div>
-</div> 
- </div>
-  <div class="clear_all">
-    <span>Clear All</span>
-  </div>
-  <div class="r">
-    <img src="./images/dream-cards/arrow1.png">
-  </div>
-</div>
-</div><!--choosen categories end-->
-<main>
+  <main>
     <div class="wrapper-dream-body mr-b mr-t">
-      <div class="dis-flex-between">
-        <div class="search_dream">
+      <div class="dis-flex-between">  
+        <div class="search_dream" style="display: none">
           <a href="#">
             <img src="./images/dream-cards/bck-c.png" />
           </a>
@@ -205,9 +120,8 @@
             <h5>Dream</h5>
             <span>Some text here</span>
           </div>
-        </div>
-
-        <div class="search_dream">
+        </div>  
+        <div class="search_dream" style="display: none">
           <a href="#">
             <img src="./images/dream-cards/bck-c.png" class="category_icon">
           </a>
@@ -216,7 +130,7 @@
             <span>Some text here</span>
           </div>
         </div>
-        <div class="search_dream">
+        <div class="search_dream" style="display: none">
           <a href="#">
             <img src="./images/dream-cards/bck-c.png" class="category_icon">
           </a>
@@ -227,304 +141,462 @@
         </div>
       </div>
     </div>
-</main>
-<script>
-    var search_typesUL = $('.slider-ul').children().length * 85;
-    $('.slider-ul').css('width', search_typesUL + 'px');
-    // console.log($('.slider-ul').children().length)
+  </main>
+<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+  <script>
+      
+      var clear_all = document.getElementById('clear_all');
+      var once = document.getElementById('once');
+      var once_lang = document.getElementById('lang');
+      var search_l = document.querySelector('.search_box label');
+      var search_container = document.querySelector('.search_container');
+
+
+       // date container
+      var date_container = document.querySelector('.date_container');
+
+      // icons container
+      var icons_container = document.querySelector('.icons_container');
+      // icon button
+      var icon = document.getElementById('icon_search');
+      // icon input
+      var icon_input = document.getElementById('icon');
+
+      // tags container
+      var tags_container = document.querySelector('.tags_container');
+      // tag button
+      var tag = document.getElementById('icon_tag');
+      // tag input
+      var tag_input = document.getElementById('tag');
+      
+      // lang container
+      var lang_container = document.querySelector('.language_container');
+      // lang button
+      var lang = document.getElementById('searh_lang');
+      // lang input
+      var lang_input = document.getElementById('lang_i');
+      
+      var date = document.getElementById('date');
+      var date_input = document.getElementById('date_i');
+      
+      //  menu_container
+      var menu_container = document.querySelector('.menu_container');
+
+      var start = document.getElementById('d_start');
+      var end = document.getElementById('d_end');
+      
+
+      // inputs DOM events
+        clear_all.addEventListener('click', function() {
+          
+          icons_container.innerHTML = "";
+          lang_container.innerHTML = "";
+          tags_container.innerHTML = "";
+          search_container.innerHTML = "";
+          d_start.innerHTML = "";
+          d_end.innerHTML = "";
+
+          is_empty();
+
+          for (let i = 0; i < once.childNodes.length - 1; i++) {
+
+            var del_once = document.querySelectorAll('#once li');
+            if (del_once[i].childNodes[0].classList.length === 2) {
+        
+              if (del_once[i].children[0].classList[1] === "active") {
+            
+                del_once[i].children[0].classList.remove("active")
+
+              }
+            }
+
+          }
+      
+      })
+
+      icon.addEventListener('click', open_icon);
+      date.addEventListener('click', open_date);
+      tag.addEventListener('click', open_tag);
+      lang.addEventListener('click', open_lang);
+      search_l.addEventListener('click', search_tag);
+      // show inputs functions
+
+      for (let i = 0; i < 30;  i++) {
+        once_lang.innerHTML += '<li tabindex="' + i + '"><h5 class="category_title opac">Language ' + i + '</h5></li>';
+      }
+
+      for (let i = 0; i < 30;  i++) {
+        once.innerHTML += '<li tabindex="' + i + '"><img src="./images/dream-cards/dream_card.png" class="category_icon">' +
+        '<h5 class="category_title ">Category ' + i + '</h5></li>';
+      }
+
+      // icons active
+      for (let i = 0; i < once.children.length; i++) {
+
+        var category = document.querySelectorAll('#once li');
+        category[i].children[0].addEventListener('click', init);
+      
+      }
+
+      // long active
+      for (let i = 0; i < once_lang.children.length; i++) {
+        var lang_cat = document.querySelectorAll('#lang li');
+        
+        lang_cat[i].children[0].addEventListener('click', lang_init);
+      }
+
+
+      // ========== Calendar 1 ===========
+      $(function() {
+          $( "#datepicker" ).datepicker({ 
+            firstDay: 1,
+            dateFormat: "yy/mm/dd",
+
+            onSelect: function(time) {
+            d_start.innerHTML = '<div class="category_wrap" id="start">' + time + '<img src="./images/dream-cards/x.png" class="deleteTag del_more" /></div>'
+            
+            if (parseInt(start.innerText.replace(/\//g, '')) > parseInt(end.innerText.replace(/\//g, '')) ) {
+              end.innerHTML = start.innerHTML; 
+            }
+            
+            if (d_end.innerHTML != "") {
+              $("#date_i").slideUp();
+              date.className = "";
+            }
+
+            delete_events();
+            $(".menu_container").slideDown();
+
+
+          }
+
+        });
+      });
+      
+      // ========== Calendar 2 ===========
+      $(function() {
+        $( "#datepicker2" ).datepicker({ 
+          firstDay: 1,
+          dateFormat: "yy/mm/dd",
+
+          onSelect: function(time) {
+
+            d_end.innerHTML =   '<div class="category_wrap" id="end">' + time + '<img src="./images/dream-cards/x.png" class="deleteTag del_more" /></div>'              
+            
+            if (parseInt(start.innerText.replace(/\//g, '')) > parseInt(end.innerText.replace(/\//g, '')) ) {
+              end.innerHTML = start.innerHTML; 
+            }
+            
+            if (d_start.innerHTML != "") {
+              $("#date_i").slideUp();
+              date.className = "";
+            }
+              delete_events();
+              $(".menu_container").slideDown();
+
+          }
+
+        });
+      });
+
+      // ========== End Calendar ===========
+
+      $('#tag_search').keypress(function(e) {
+        if(e.which == 13 && this.value != "") {
+
+            search_container.innerHTML += '<div class="category_wrap">' + this.value.replace(/</g, "&lt;") + '<img src="./images/dream-cards/x.png" class="deleteTag del_more" /></div>' 
+            this.value = "";
+            $(".menu_container").slideDown();
+            delete_events();
+
+
+          }
+      })
+
+
+
+      //tags button click function
+      $('.input_tag').keypress(function(e) {
+        if(e.which == 13 && this.value != "") {
+
+          $("#tag").slideUp();
+          $(".menu_container").slideDown();
+          tag.className = "";
+
+          tags_container.innerHTML += '<div class="category_wrap">#' + tag_input.children[0].value.replace(/</g, "&lt;") + '<img src="./images/dream-cards/x.png" class="deleteTag del_more" /></div>';
+
+          tag_input.children[0].value = "";
+          
+          delete_events();
+
+          }
+      });
+      
+      function open_icon() {
+        if (this.className != "active") {
+          this.className = "active";
+          if (tag_input.style.display == "block" || lang_input.style.display == "block" || date_input.style.display == "flex") {
+            tag_input.style.display = "none";
+            lang_input.style.display = "none";
+            date_input.style.display = "none";
+            tag.className = "";
+            lang.className = "";
+            date.className = "";
+
+            $("#icon").slideDown();
+            icon_input.style.display = "block";
+
+          }else{
+
+            $("#icon").slideDown();
+            icon_input.style.display = "block";
+
+
+          }
+        } else {
+
+          this.className = "";
+          $("#icon").slideUp();
+      
+        }
+      }
+
+      function open_date() {
+        if (this.className != "active") {
+          this.className = "active";
+          if (tag_input.style.display == "block" || lang_input.style.display == "block" || icon_input.style.display == "block") {
+            tag_input.style.display = "none";
+            lang_input.style.display = "none";
+            icon_input.style.display = "none";
+            tag.className = "";
+            lang.className = "";
+            icon.className = "";
+
+            $("#date_i").slideDown();
+            date_input.style.display = "flex";
+
+          }else{
+
+            $("#date_i").slideDown();
+            date_input.style.display = "flex";
+
+
+          }
+        } else {
+
+          this.className = "";
+          $("#date_i").slideUp();
+      
+        }
+      }
+
+      function open_tag() {
+        if (this.className != "active") {
+
+          this.className = "active";
+          if (icon_input.style.display == "block" || lang_input.style.display == "block"  || date_input.style.display == "flex") {
+            icon_input.style.display = "none";
+            lang_input.style.display = "none";
+            date_input.style.display = "none";
+            date.className = "";
+            icon.className = "";
+            lang.className = "";
+
+            $("#tag").slideDown();
+            tag_input.style.display = "block";
+
+          }else{
+
+            $("#tag").slideDown();
+            tag_input.style.display = "block";
+          }
+
+        }else{
+
+          this.className = "";
+          $("#tag").slideUp();
+
+        }
+      }
+
+      function open_lang() {
+
+        if (this.className != "active") {
+
+          this.className = "active";
+
+          if (tag_input.style.display == "block" || icon_input.style.display == "block" || date_input.style.display == "flex") {
+
+            tag_input.style.display = "none";
+            icon_input.style.display = "none";
+            date_input.style.display = "none";
+            icon.className = "";
+            tag.className = "";
+            date.className = "";
+
+            $("#lang_i").slideDown();
+            lang_input.style.display = "block";
+
+          }else{
+
+            $("#lang_i").slideDown();
+            lang_input.style.display = "block";
+          }  
+        }else{
+          
+          this.className = "";
+          $("#lang_i").slideUp();
+      
+        }
+      }
+
+      function init() {
+        if (this.classList[1] != "active") {
+
+          this.className += " active";
+          $(".menu_container").slideDown();
+          $("#icon").slideUp();
+          icon.className = "";
+          icons_container.innerHTML += '<div class="category_wrap" tabindex="' + this.parentNode.tabIndex + '">' + this.nextSibling.innerText + '<img src="./images/dream-cards/x.png" class="deleteTag del_icon" /></div>';
+
+          let del_more = document.querySelectorAll('.del_icon');
+          
+          for (let i = 0; i < del_more.length; i++) {
+          
+            del_more[i].addEventListener('click', delete_icon);
+          
+          }
+        }
+      }
+
+      function lang_init() {
+        if (this.classList[2] != "act") {
+
+          this.className += " act";
+          $(".menu_container").slideDown();
+          $("#lang_i").slideUp();
+          lang.className = "";
+
+          lang_container.innerHTML += '<div class="category_wrap" tabindex="' + this.parentNode.tabIndex + '">' + this.innerText + '<img src="./images/dream-cards/x.png" class="deleteTag del_lang" /></div>';
+          let del_more = document.querySelectorAll('.del_lang');
+
+          for (let i = 0; i < del_more.length; i++) {
+            del_more[i].addEventListener('click', delete_lang);
+          }
+        }
+      }
+
+      function delete_lang() {
+        this.parentNode.parentNode.removeChild(this.parentNode);
+        
+        var lang_li = document.querySelectorAll('#lang li');
+        
+        lang_li[this.parentNode.tabIndex].children[0].classList.remove("act");
+        is_empty();
+      }
+
+      function delete_icon() {
+        this.parentNode.parentNode.removeChild(this.parentNode);
+        
+        var oncest = document.querySelectorAll('#once li');
+        
+        oncest[this.parentNode.tabIndex].children[0].classList.remove("active");
+        is_empty();
+        
+      }
+
+      function search_tag() {
+        var search_in = document.getElementById('tag_search');
+        if (search_in.value != "") {  
+          search_container.innerHTML += '<div class="category_wrap">' + search_in.value.replace(/</g, "&lt;") + '<img src="./images/dream-cards/x.png" class="deleteTag del_more" /></div>'; 
+          search_in.value = "";
+
+          $(".menu_container").slideDown();
+
+          delete_events();
+        }
+      }
+
+      function delete_more() {
+        this.parentNode.parentNode.removeChild(this.parentNode);
+        is_empty();
+      }
+
+      function delete_events() {
+        
+        let del_more = document.querySelectorAll('.del_more');
+          
+        for (let i = 0; i < del_more.length; i++) {
+        
+          del_more[i].addEventListener('click', delete_more);
+        
+        }
+      
+      }
+
+      function is_empty() {
+
+        if (start.innerHTML === "" &&
+            end.innerHTML === "" &&  
+            icons_container.innerHTML === "" && 
+            lang_container.innerHTML === "" && 
+            tags_container.innerHTML === "" && 
+            search_container.innerHTML === "") {
+
+          menu_container.style.display = "none";
+        
+        }
+      }
+
+
+
+    var transform = 0;
 
     function onRight() {
-      currentValue = parseInt($('.slider-ul').css('transform').split(',')[4]);
       
-      con = currentValue ? currentValue - 120: -120;
-      
-      if (Math.abs(con) + 1020 < search_typesUL) {
-        // console.log(con)
-        $('.slider-ul').css('transform', 'translate(' + con + 'px, 0)');
-      } else {
-        // $('.next').css('display','none');
+      if (transform < once.scrollWidth - once.clientWidth) {
+
+        transform += 90;
+        once.style.transform = "translateX(-" + transform + "px)";
       }
 
     }
+
     function onLeft() {
-      currentValue = parseInt($('.slider-ul').css('transform').split(',')[4]);
-      
-      con = currentValue ? currentValue + 120 : 0;
-      if (con < 0) {
-        console.log(con)
-        $('.slider-ul').css('transform', 'translate(' + con + 'px, 0)');
-      } else {
-        // $('.next').css('display','none');
-        $('.slider-ul').css('transform', 'translate(' + 0 + 'px, 0)');
+          
+      if (transform > 0) {
+
+        transform -= 90;
+        once.style.transform = "translateX(-" + transform + "px)";
       }
 
     }
-$(".search_types").hide();
 
-$(".search_t").hide();
-$(".search_Language").hide();
-///
-  // $(".search_types").slideToggle();
-  // $('#icon_search').toggleClass('active');
-///
-$('#icon_search').click(function () {
-  $(".search_types").slideToggle();
-  $('#icon_search').toggleClass('active');
-  $('.menu_container').slideUp();
-});
-$('.slider-ul li').click(function () {
-  $(this).find('img').toggleClass('active');
-  $(".search_types").slideUp();
-});    
-</script>
-<script>//add search categories
-$(".menu_container").hide();
-window.items = []
-$('.slider-ul li').click(function () {
-  const item = $(this).find('.category_title').text();
-  const isAdding = !items.includes(item)
-  if (isAdding){
-    $(this).find(".category_title").addClass('clicked')
-    items.push(item)
-    $(".icons_container").append(`
-      <div class='category_wrap'>
-        ${item}
-        <img src="./images/dream-cards/x.png" class="deleteTag" />
-      </div>
-    `)
-  } else {
-    // console.log($('.category_wrap').length)
-    $('.category_wrap').each(function() {
-      // console.error(0, val)
-      // const ableToDelete = false
-      const ableToDelete = $(this).text().replace(/\n| /g, '') === item
-      if (ableToDelete) {
-        const itemIndex = items.indexOf(item)
-        items.splice(itemIndex, 1)
-        $(this).remove()
-      }
-    })
-  }
-
-$(document).ready(function(){
-  checkSize(); 
-    //check(); 
-  
-});
-
-
-
-//arrows
-function checkSize(){
-  if($("#middle").height()>75)  {
-    $('.r').show();
-    $('.l').show();
-  }
-  else{
-    $('.r').hide();
-    $('.l').hide();
-  }
-}
-
-/*
-function check(){
- 
- if($(".langBox").width()<900)  {
-    $('.r').css('display', 'none');
-    $('.l').css('display', 'none');
-  }
-
-
-}
-*/
-
-
- if (items.length) {
-    $(".menu_container").slideDown()
-  }
- $('.deleteTag').click(function () {
-    const item = $(this).parent().text().replace(/\n| /g, '')
-    if (items.includes(item)) {
-      const itemIndex = items.indexOf(item)
-      items.splice(itemIndex, 1)
-      $(this).closest('.category_wrap').remove()
-      $('.slider-ul li').each(function() {
-        const isActive = $(this).text().replace(/\n| /g, '') === item
-        if (isActive) {
-          $(this).find('img').removeClass('active')
-        }
-      })
-    }
-    if (items.length === 0) {
-      $('.menu_container').slideUp()
-    }
-    // $('.icons_container').find('.category_wrap').remove()
-    // $('.menu_container').slideUp()
-    // if ($( '.category_icon').hasClass('active')) {
-      // $('.category_icon').removeClass('active')
-    // }
-  })
-});
-</script>
-<script>
-$('.clear_all').click(function () {
-  items = []
-  $('.slider-ul li img').each(function() {
-    $(this).removeClass('active')
-  })
-  $('.category_wrap').remove()
-  $(".menu_container").slideUp();
-});
-
-
-
-
-</script>
-<script>
-  $('#icon_tag').click(function () {
-    $('#icon_search').toggleClass('active');
-  $(".search_t").slideToggle();
-  $('#icon_tag').toggleClass('active');
-  $(".input_tag").show().focus();
-  $('.menu_container').slideUp()
-});
-
-
-//tags button click function
-$('.input_tag').keypress(function(e) {
-    if(e.which == 13 || e.keyCode==32) {
-    $(".search_t").slideUp();
-    }
-});
-
-//selected box slider
-$(document).ready(function () {
-  $(".r").click(function () { 
-   // var leftPos = $('#middle').offset().right;
-    //console.log(leftPos);
-
-   var rt = ($('#middle').offset().left + $('#middle').outerWidth());
-   console.log(rt);
-
-    newPosition = rt - 1400;
-   // newPosition = newPosition > 0 ? newPosition : 0
-
-    $('#middle').css("transform", "translateX(" + newPosition + "px)")
     
-  });   
+    var transform2 = 0;
 
-  $(".l").click(function () { 
-    var leftPos = $('#middle').offset().left;
-    newPosition = (leftPos + 100);
-    newPosition = newPosition < 0 ? newPosition : 0
-    $('#middle').css("transform", "translateX(" + newPosition + "px)");
-
-  });
-
-  
-});
+    function onRight2() {
       
-//adding hashtags 
-function myFunction2(t,e){
-    if(e.keyCode==13|| e.keyCode==32){
-      if(t.value!=0 && t.value.trim()!=""){
-          var x = document.createElement('div');
-          x.setAttribute('class','category_wrap');
-         var z = document.createElement('div');
-          z.setAttribute('class','close');
-          var y = document.createElement('a');
-          z.innerHTML= '<img src="./images/dream-cards/x.png" />';
-          z.setAttribute('class','deleteTag');
-          y.setAttribute('href',"#");
-          y.setAttribute('id',"link_tag");
-          y.innerHTML = "#"+t.value.trim();
-          x.appendChild(y);
-          x.appendChild(z);
-          document.getElementById("tags_list").appendChild(x);
-          t.value = t.defaultValue;
-          $(".menu_container").slideDown();
-          $(z).click(function(){
-            $(x).remove();
-            $(".menu_container").slideUp();
-    });
-    
-  }}  
-};
+      if (transform2 < once_lang.scrollWidth - once_lang.clientWidth) {
 
-
-// search by language
-
-  $('#searh_lang').click(function () {
-    $('#icon_search').toggleClass('active');
-    $(".search_Language").slideToggle();
-    $('#searh_lang').toggleClass('active');
-     $('.menu_container').slideUp();
-   });
-    $("#lang li").click(function (){
-   $(this).toggleClass('opac');
-
-   $('.search_Language').slideUp();
-      $(".menu_container").slideDown();
-  });
-  $('#icon_search').toggleClass('active');
-
-window.items2 = []
-$('#lang li').click(function () {
-  const item2 = $(this).text();
-  const isAdding2 = !items2.includes(item2)
-  if (isAdding2){
-    $(this).addClass('clicked')
-    items2.push(item2)
-    $(".language_container").append(`
-      <div class='category_wrap'>
-        ${item2}
-        <img src="./images/dream-cards/x.png" class="deleteTag" />
-      </div>
-    `)
-  } else {
-     $('.category_wrap').each(function() {
-      // console.error(0, val)
-      // const ableToDelete = false
-      const ableToDelete = $(this).text().replace(/\n| /g, '') === item2
-      if (ableToDelete) {
-        const itemIndex = items2.indexOf(item2)
-        items2.splice(itemIndex, 1)
-        $(this).remove()
+        transform2 += 90;
+        once_lang.style.transform = "translateX(-" + transform2 + "px)";
+      
       }
-    })
-  }
-       $('.deleteTag').click(function (){
 
-   const item2 = $(this).parent().text().replace(/\n| /g, '')
-    if (items2.includes(item2)) {
-      const itemIndex = items2.indexOf(item2)
-      items2.splice(itemIndex, 1)
-      $(this).closest('.category_wrap').remove()
-      $('#lang li').each(function() {
-        const isActive = $(this).text().replace(/\n| /g, '') === item2
-        if (isActive) {
-          $(this).addClass('opac')
-        }
-      })
-  if (items2.length === 0) {
-      $('.menu_container').slideUp()
     }
 
-       
+    function onLeft2() {
+          
+      if (transform2 > 0) {
+
+        transform2 -= 90;
+        once_lang.style.transform = "translateX(-" + transform2 + "px)";
+      
+      }
     }
-  })
-})
-;
-$('.clear_all').click(function () {
- $('.langBox ul li').each(function() {
-    $(this).addClass('opac')
-  })
-  $('.category_wrap').remove()
-  $(".menu_container").slideUp();
-});
-
-
-</script>
-
+  </script>
 </body>
 </html> 

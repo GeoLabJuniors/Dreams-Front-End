@@ -172,6 +172,9 @@ cursor: pointer;
 	font-family:bnm;
 	font-weight:bold;
 }
+.act {
+    opacity: 1 !important;
+}
 .close-btn-snt{
 	position:absolute;
 	top:-6.5px;
@@ -272,7 +275,7 @@ cursor: pointer;
 	width:100%;
 	height:calc(100vh - 138.4px);
 }
-<<<<<<< HEAD
+/* <<<<<<< HEAD */
 .t2,.t3,.t4{
 	color:white;
 }
@@ -816,8 +819,7 @@ width: 100%;
 }
 .icon_container{
 padding-left: 25px;
-	//display: flex;
-	//position:relative;
+
 	margin-top: 40px;
 	width:1052px;
 	}
@@ -1081,7 +1083,7 @@ display: flex;
 }
 .langBox{font-family: bnm;margin-top: 20px;}
 .opac{
-	opacity: 0.8;
+	opacity: 0.5;
 }
 .deleteTag{
 	cursor: pointer;
@@ -1267,4 +1269,4 @@ bottom:  4px;
     border-spacing: 0 !important;
     border-left: solid 2px #fff;
     }
-}
+

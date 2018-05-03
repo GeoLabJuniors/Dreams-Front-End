@@ -112,7 +112,7 @@
   <main>
     <div class="wrapper-dream-body mr-b mr-t">
       <div class="dis-flex-between">  
-        <div class="search_dream" style="display: none">
+        <div class="search_dream">
           <a href="#">
             <img src="./images/dream-cards/bck-c.png" />
           </a>
@@ -121,7 +121,7 @@
             <span>Some text here</span>
           </div>
         </div>  
-        <div class="search_dream" style="display: none">
+        <div class="search_dream">
           <a href="#">
             <img src="./images/dream-cards/bck-c.png" class="category_icon">
           </a>
@@ -130,7 +130,7 @@
             <span>Some text here</span>
           </div>
         </div>
-        <div class="search_dream" style="display: none">
+        <div class="search_dream" >
           <a href="#">
             <img src="./images/dream-cards/bck-c.png" class="category_icon">
           </a>
@@ -142,8 +142,8 @@
       </div>
     </div>
   </main>
-<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 
   <script>
       
@@ -213,6 +213,19 @@
             }
 
           }
+          for (let i = 0; i < once_lang.childNodes.length - 1; i++) {
+
+            var lang_once = document.querySelectorAll('#lang li');
+            if (lang_once[i].childNodes[0].classList.length === 3) {
+        
+              if (lang_once[i].children[0].classList[2] === "act") {
+            
+                lang_once[i].children[0].classList.remove("act")
+
+              }
+            }
+
+          }
       
       })
 
@@ -221,8 +234,8 @@
       tag.addEventListener('click', open_tag);
       lang.addEventListener('click', open_lang);
       search_l.addEventListener('click', search_tag);
+      
       // show inputs functions
-
       for (let i = 0; i < 30;  i++) {
         once_lang.innerHTML += '<li tabindex="' + i + '"><h5 class="category_title opac">Language ' + i + '</h5></li>';
       }
@@ -304,7 +317,8 @@
       // ========== End Calendar ===========
 
       $('#tag_search').keypress(function(e) {
-        if(e.which == 13 && this.value != "") {
+        if(e.which === 13  ||  e.which === 32) {
+          if(this.value != "" && this.value != " "){
 
             search_container.innerHTML += '<div class="category_wrap">' + this.value.replace(/</g, "&lt;") + '<img src="./images/dream-cards/x.png" class="deleteTag del_more" /></div>' 
             this.value = "";
@@ -313,25 +327,27 @@
 
 
           }
+        }
       })
 
-
+      
+      
 
       //tags button click function
       $('.input_tag').keypress(function(e) {
-        if(e.which == 13 && this.value != "") {
+        if(e.which === 13  ||  e.which === 32) {
+          if(this.value != "" && this.value != " "){
+            $("#tag").slideUp();
+            $(".menu_container").slideDown();
+            tag.className = "";
 
-          $("#tag").slideUp();
-          $(".menu_container").slideDown();
-          tag.className = "";
+            tags_container.innerHTML += '<div class="category_wrap">#' + tag_input.children[0].value.replace(/</g, "&lt;") + '<img src="./images/dream-cards/x.png" class="deleteTag del_more" /></div>';
 
-          tags_container.innerHTML += '<div class="category_wrap">#' + tag_input.children[0].value.replace(/</g, "&lt;") + '<img src="./images/dream-cards/x.png" class="deleteTag del_more" /></div>';
-
-          tag_input.children[0].value = "";
+            tag_input.children[0].value = "";
           
-          delete_events();
-
+            delete_events();
           }
+        }
       });
       
       function open_icon() {
@@ -509,13 +525,18 @@
 
       function search_tag() {
         var search_in = document.getElementById('tag_search');
-        if (search_in.value != "") {  
-          search_container.innerHTML += '<div class="category_wrap">' + search_in.value.replace(/</g, "&lt;") + '<img src="./images/dream-cards/x.png" class="deleteTag del_more" /></div>'; 
-          search_in.value = "";
+        
+        if(e.which === 13  ||  e.which === 32) {
+          
+          if(search_in.value != "" && search_in.value != " ") {  
+          
+            search_container.innerHTML += '<div class="category_wrap">' + search_in.value.replace(/</g, "&lt;") + '<img src="./images/dream-cards/x.png" class="deleteTag del_more" /></div>'; 
+            search_in.value = "";
 
-          $(".menu_container").slideDown();
+            $(".menu_container").slideDown();
 
-          delete_events();
+            delete_events();
+          }
         }
       }
 
@@ -560,6 +581,8 @@
 
         transform += 90;
         once.style.transform = "translateX(-" + transform + "px)";
+      }else{
+        transform = 0;
       }
 
     }
@@ -570,6 +593,10 @@
 
         transform -= 90;
         once.style.transform = "translateX(-" + transform + "px)";
+      }else{
+       
+        transform = once.scrollWidth - once.clientWidth;
+      
       }
 
     }
@@ -584,6 +611,9 @@
         transform2 += 90;
         once_lang.style.transform = "translateX(-" + transform2 + "px)";
       
+      }else{
+        transform2 = 0;
+
       }
 
     }
@@ -595,6 +625,8 @@
         transform2 -= 90;
         once_lang.style.transform = "translateX(-" + transform2 + "px)";
       
+      }else{
+        transform2 = once_lang.scrollWidth - once_lang.clientWidth;
       }
     }
   </script>

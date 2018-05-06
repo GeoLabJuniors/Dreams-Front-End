@@ -317,7 +317,9 @@
       // ========== End Calendar ===========
 
       $('#tag_search').keypress(function(e) {
-        if(e.which === 13  ||  e.which === 32) {
+        if(e.which === 32 && this.value == " "){
+          this.value = "";
+        } else if(e.which === 13) {
           if(this.value != "" && this.value != " "){
 
             search_container.innerHTML += '<div class="category_wrap">' + this.value.replace(/</g, "&lt;") + '<img src="./images/dream-cards/x.png" class="deleteTag del_more" /></div>' 
@@ -336,7 +338,10 @@
       //tags button click function
       $('.input_tag').keypress(function(e) {
         if(e.which === 13  ||  e.which === 32) {
-          if(this.value != "" && this.value != " "){
+          if(this.value == " "){
+            this.value = "";
+          } else if(this.value != ""){
+
             $("#tag").slideUp();
             $(".menu_container").slideDown();
             tag.className = "";
@@ -525,8 +530,7 @@
 
       function search_tag() {
         var search_in = document.getElementById('tag_search');
-        
-        if(e.which === 13  ||  e.which === 32) {
+      
           
           if(search_in.value != "" && search_in.value != " ") {  
           
@@ -537,7 +541,7 @@
 
             delete_events();
           }
-        }
+        
       }
 
       function delete_more() {
